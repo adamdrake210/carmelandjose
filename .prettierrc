@@ -1,0 +1,14 @@
+{
+  "editor.tabSize": 2,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "eslintIntegration": true,
+  "html-css-class-completion.enableEmmetSupport": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
+  "editor.formatOnSave": true,
+  "files.defaultLanguage": "javascriptreact",
+  "javascript.referencesCodeLens.enabled": true
+}
