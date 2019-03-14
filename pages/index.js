@@ -9,10 +9,9 @@ const Home = () => (
     <Nav />
 
     <div className="hero">
+      <p className="description">SAVE THE DATE</p>
       <h1 className="title">Carmel & Jose</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
+      <p className="description">6th June 2020 - MADRID, SPAIN</p>
 
       {/* <div className="row">
         <Link href="https://github.com/zeit/next.js#getting-started">
