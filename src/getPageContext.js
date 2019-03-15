@@ -22,6 +22,9 @@ const theme = createMuiTheme({
       main: teal[500],
       dark: teal[700],
     },
+    textPrimary: {
+      color: '#ffffff',
+    },
   },
   typography: {
     useNextVariants: true,

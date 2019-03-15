@@ -6,9 +6,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import { i18n, withNamespaces } from '../../../i18n';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -26,18 +28,11 @@ const styles = theme => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-  },
-  menuButton: {
-    marginLeft: 20,
-    color: '#FFAE00',
-  },
-  firstLetter: {
-    border: '2px solid #009688',
-    height: '50px',
-    borderRadius: '50%',
-    width: '50px',
-    color: '#009688',
-    padding: '7px',
+    '& a': {
+      color: '#fff',
+      textDecoration: 'none',
+      fontSize: '1.1em',
+    },
   },
 });
 
@@ -55,7 +50,7 @@ class AppHeader extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, t } = this.props;
     const { drawerOpen } = this.state;
 
     return (
@@ -63,18 +58,28 @@ class AppHeader extends React.Component {
         <AppBar color="primary" className={classes.appBar}>
           <Toolbar>
             <div className={classes.grow}>
-              <Link href="/search">
+              {/* <Link href="/search">
                 <a>RSVP</a>
-              </Link>
+              </Link> */}
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={() =>
+                  i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')
+                }
+              >
+                {t('change-locale')}
+              </Button>
             </div>
             <Link href="/">
               <a>
-                <img src="/static/logo.svg" />
+                {/* <img src="/static/logo.svg" /> */}
+                <h2>The Wedding!</h2>
               </a>
             </Link>
             <div className={classes.grow} />
 
-            <Hidden mdUp implementation="css">
+            {/* <Hidden mdUp implementation="css">
               <IconButton
                 color="inherit"
                 aria-label="Open drawer"
@@ -83,7 +88,7 @@ class AppHeader extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
-            </Hidden>
+            </Hidden> */}
           </Toolbar>
         </AppBar>
 
@@ -101,4 +106,4 @@ AppHeader.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AppHeader);
+export default withStyles(styles)(withNamespaces('appheader')(AppHeader));
