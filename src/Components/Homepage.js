@@ -17,18 +17,23 @@ const styles = theme => ({
     height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
-      padding: '0 2em',
+      padding: '4em 2em',
       textAlign: 'center',
     },
   },
   title: {
-    margin: '0',
     padding: '20px 0px',
     color: '#fff',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '56px',
+    },
   },
   savedate: {
     color: '#fff',
     textDecoration: 'underline',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '3em',
+    },
   },
   info: {
     color: '#fff',
