@@ -6,7 +6,7 @@ const styles = theme => ({
   imageRow: {
     display: 'flex',
     flexDirection: 'row',
-    marginTop: '1em',
+    margin: '1em',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       alignItems: 'center',

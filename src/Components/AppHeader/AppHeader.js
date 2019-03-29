@@ -86,7 +86,7 @@ class AppHeader extends React.Component {
                   <img className={classes.flag} src="./static/spain.png" />
                 )}
                 {lang === false && (
-                  <img className={classes.flag} src="./static/uk.png" />
+                  <img className={classes.flag} src="./../static/uk.png" />
                 )}
               </Button>
             </div>
