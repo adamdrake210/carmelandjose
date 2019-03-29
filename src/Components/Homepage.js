@@ -3,22 +3,25 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { withNamespaces } from '../../i18n';
+import Photos from './Photos';
 
 const styles = theme => ({
   hero: {
     alignItems: 'center',
     display: 'flex',
-    justifyContent: 'center',
+    paddingTop: '100px',
     flexDirection: 'column',
     width: '100%',
     fontFamily: theme.typography.fontFamily,
     fontSize: '2em',
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '4em 2em',
+      paddingTop: '1em',
       textAlign: 'center',
+      height: '100%',
     },
   },
   title: {
@@ -30,12 +33,14 @@ const styles = theme => ({
   },
   savedate: {
     color: '#fff',
-    textDecoration: 'underline',
     [theme.breakpoints.down('xs')]: {
       marginTop: '3em',
     },
   },
   info: {
+    color: '#fff',
+  },
+  infoSecond: {
     color: '#fff',
     marginBottom: '2em',
   },
@@ -45,7 +50,7 @@ function Homepage(props) {
   const { classes, t } = props;
   return (
     <div className={classes.hero}>
-      <Typography variant="h5" className={classes.savedate}>
+      <Typography variant="h4" className={classes.savedate}>
         {t('save-date')}
       </Typography>
       <Typography variant="h1" className={classes.title}>
@@ -54,10 +59,13 @@ function Homepage(props) {
       <Typography variant="h5" className={classes.info}>
         {t('where')}
       </Typography>
+      <Typography variant="h5" className={classes.infoSecond}>
+        {t('when')}
+      </Typography>
       <Typography variant="h6" className={classes.info}>
         {t('more-info')}
       </Typography>
-      <style jsx>{``}</style>
+      <Photos />
     </div>
   );
 }

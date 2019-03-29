@@ -27,6 +27,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   appBar: {
+    backgroundColor: 'white',
     zIndex: theme.zIndex.drawer + 1,
     '& a': {
       color: '#fff',
@@ -34,11 +35,18 @@ const styles = theme => ({
       fontSize: '1.1em',
     },
   },
+  weddingRings: {
+    width: '80px',
+  },
+  flag: {
+    width: '40px',
+  },
 });
 
 class AppHeader extends React.Component {
   state = {
     drawerOpen: false,
+    lang: true,
   };
 
   handleDialogClose = () => this.setState({ dialogOpen: false });
@@ -49,32 +57,46 @@ class AppHeader extends React.Component {
     this.setState(state => ({ drawerOpen: !state.drawerOpen }));
   };
 
+  changeFlag = () => {
+    this.setState(prevState => ({
+      lang: !prevState.lang,
+    }));
+  };
+
   render() {
     const { classes, t } = this.props;
-    const { drawerOpen } = this.state;
+    const { drawerOpen, lang } = this.state;
 
     return (
       <div className={classes.root}>
-        <AppBar color="primary" className={classes.appBar}>
+        <AppBar className={classes.appBar}>
           <Toolbar>
             <div className={classes.grow}>
               {/* <Link href="/search">
                 <a>RSVP</a>
               </Link> */}
               <Button
-                variant="contained"
-                color="secondary"
-                onClick={() =>
-                  i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')
-                }
+                onClick={() => {
+                  i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
+                  this.changeFlag();
+                }}
               >
-                {t('change-locale')}
+                {/* {t('change-locale')} */}
+                {lang === true && (
+                  <img className={classes.flag} src="./static/spain.png" />
+                )}
+                {lang === false && (
+                  <img className={classes.flag} src="./static/uk.png" />
+                )}
               </Button>
             </div>
             <Link href="/">
               <a>
                 {/* <img src="/static/logo.svg" /> */}
-                <h2>The Wedding!</h2>
+                <img
+                  className={classes.weddingRings}
+                  src="./static/rings.png"
+                />
               </a>
             </Link>
             <div className={classes.grow} />
