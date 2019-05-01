@@ -11,6 +11,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { i18n, withNamespaces } from '../../../i18n';
+import { Typography } from '@material-ui/core';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -92,16 +93,12 @@ class AppHeader extends React.Component {
             </div>
             <Link href="/">
               <a>
-                {/* <img src="/static/logo.svg" /> */}
-                <img
-                  className={classes.weddingRings}
-                  src="./static/rings.png"
-                />
+                <Typography variant="h4">The Wedding</Typography>
               </a>
             </Link>
             <div className={classes.grow} />
 
-            {/* <Hidden mdUp implementation="css">
+            <Hidden mdUp implementation="css">
               <IconButton
                 color="inherit"
                 aria-label="Open drawer"
@@ -110,7 +107,7 @@ class AppHeader extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
-            </Hidden> */}
+            </Hidden>
           </Toolbar>
         </AppBar>
 

@@ -14,7 +14,6 @@ const styles = theme => ({
     width: '100%',
     fontFamily: theme.typography.fontFamily,
     fontSize: '2em',
-    backgroundColor: theme.palette.primary.main,
     height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',

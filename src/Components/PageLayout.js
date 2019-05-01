@@ -17,12 +17,14 @@ const styles = theme => ({
     height: '100vh',
     overflow: 'hidden',
     flexWrap: 'nowrap',
+    backgroundColor: theme.palette.primary.main,
   },
   transitionalHeight: {
     [theme.breakpoints.up('lg')]: {
       height: '100vh',
       overflow: 'scroll',
       flexWrap: 'nowrap',
+      backgroundColor: theme.palette.primary.main,
     },
   },
 });

@@ -14,13 +14,7 @@ const styles = theme => ({
   },
   image: {
     width: '200px',
-    height: '100%',
-    margin: '10px',
-    border: 'solid 2px #fff',
-  },
-  imageWide: {
-    width: '275px',
-    height: '100%',
+    height: '260px',
     margin: '10px',
     border: 'solid 2px #fff',
   },
@@ -30,10 +24,7 @@ function Photos(props) {
   const { classes } = props;
   return (
     <div className={classes.imageRow}>
-      <img src="./static/IMG_9484.JPG" className={classes.image} />
-      <img src="./static/IMG_3674.JPG" className={classes.image} />
-      <img src="./static/IMG_1556.JPG" className={classes.imageWide} />
-      <img src="./static/IMG_0781.JPG" className={classes.image} />
+      <img src="./static/IMG_4086.JPG" className={classes.image} />
     </div>
   );
 }
