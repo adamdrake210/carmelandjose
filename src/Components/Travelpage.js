@@ -56,25 +56,25 @@ function Travelpage(props) {
       <Typography variant="h6" className={classes.subtitle}>
         {t('flightstitle')}
       </Typography>
-      <Typography variant="p" className={classes.text}>
+      <Typography variant="body1" className={classes.text}>
         {t('flightsinfo1')}
       </Typography>
-      <Typography variant="p" className={classes.text}>
+      <Typography variant="body1" className={classes.text}>
         {t('flightsinfo2')}
       </Typography>
       <Typography variant="h6" className={classes.subtitle}>
         {t('gettingtitle')}
       </Typography>
-      <Typography variant="p" className={classes.text}>
+      <Typography variant="body1" className={classes.text}>
         {t('gettinginfo1')}
       </Typography>
-      <Typography variant="p" className={classes.text}>
+      <Typography variant="body1" className={classes.text}>
         {t('gettinginfo2')}
       </Typography>
-      <Typography variant="p" className={classes.text}>
+      <Typography variant="body1" className={classes.text}>
         {t('gettinginfo3')}
       </Typography>
-      <Typography variant="p" className={classes.boldtext}>
+      <Typography variant="body1" className={classes.boldtext}>
         {t('moreinfo')}
       </Typography>
       {/* <Typography variant="h1" className={classes.title}>
