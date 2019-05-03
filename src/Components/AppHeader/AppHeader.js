@@ -8,10 +8,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
+
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { i18n, withNamespaces } from '../../../i18n';
 import { Typography } from '@material-ui/core';
+import AppHeaderDrawer from './AppHeaderDrawer';
+import DesktopNavigation from './DesktopNavigation';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -50,9 +53,9 @@ class AppHeader extends React.Component {
     lang: true,
   };
 
-  handleDialogClose = () => this.setState({ dialogOpen: false });
+  // handleDialogClose = () => this.setState({ dialogOpen: false });
 
-  handleDialogOpen = () => this.setState({ dialogOpen: true });
+  // handleDialogOpen = () => this.setState({ dialogOpen: true });
 
   handleDrawerToggle = () => {
     this.setState(state => ({ drawerOpen: !state.drawerOpen }));
@@ -91,14 +94,18 @@ class AppHeader extends React.Component {
                 )}
               </Button>
             </div>
-            <Link href="/">
-              <a>
-                <Typography variant="h4">The Wedding</Typography>
-              </a>
-            </Link>
-            <div className={classes.grow} />
+            <Hidden mdDown implementation="css">
+              <DesktopNavigation />
 
+              <div className={classes.grow} />
+            </Hidden>
             <Hidden mdUp implementation="css">
+              <Link href="/">
+                <a>
+                  <Typography variant="h4">The Wedding</Typography>
+                </a>
+              </Link>
+              <div className={classes.grow} />
               <IconButton
                 color="inherit"
                 aria-label="Open drawer"
@@ -111,11 +118,10 @@ class AppHeader extends React.Component {
           </Toolbar>
         </AppBar>
 
-        {/* <AppHeaderDrawer
-          user={user}
+        <AppHeaderDrawer
           drawerOpen={drawerOpen}
           handleDrawerToggle={this.handleDrawerToggle}
-        /> */}
+        />
       </div>
     );
   }
