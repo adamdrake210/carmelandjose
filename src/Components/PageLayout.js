@@ -24,6 +24,7 @@ const styles = theme => ({
     overflow: 'scroll',
     flexWrap: 'nowrap',
     backgroundColor: theme.palette.primary.main,
+    WebkitOverflowScrolling: 'touch',
   },
 });
 
