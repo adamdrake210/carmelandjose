@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { withNamespaces } from '../../i18n';
+import MetroMap from './GoogleMaps/MetroMap';
 
 const styles = theme => ({
   content: {
@@ -69,6 +70,15 @@ function Accommodationpage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('metroinfo')}
       </Typography>
+      <MetroMap
+        isMarkerShown
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={
+          <div style={{ height: `400px`, width: '100%', margin: '25px 0' }} />
+        }
+        mapElement={<div style={{ height: `100%` }} />}
+      />
       <Typography variant="body1" className={classes.text}>
         {t('para1')}
       </Typography>
