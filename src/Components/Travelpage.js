@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { withNamespaces } from '../../i18n';
-import Photos from './Photos';
 
 const styles = theme => ({
   content: {
@@ -77,18 +76,6 @@ function Travelpage(props) {
       <Typography variant="body1" className={classes.boldtext}>
         {t('moreinfo')}
       </Typography>
-      {/* <Typography variant="h1" className={classes.title}>
-        {t('h1')}
-      </Typography>
-      <Typography variant="h5" className={classes.info}>
-        {t('where')}
-      </Typography>
-      <Typography variant="h5" className={classes.infoSecond}>
-        {t('when')}
-      </Typography>
-      <Typography variant="h6" className={classes.info}>
-        {t('more-info')}
-      </Typography> */}
     </div>
   );
 }
@@ -97,4 +84,4 @@ Travelpage.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(withNamespaces('Travelpage')(Travelpage));
+export default withStyles(styles)(withNamespaces('travelpage')(Travelpage));

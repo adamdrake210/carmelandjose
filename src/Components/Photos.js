@@ -5,11 +5,10 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   imageRow: {
     display: 'flex',
-    flexDirection: 'row',
-    margin: '1em',
+    alignItems: 'center',
+    margin: '0 auto',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
-      alignItems: 'center',
     },
   },
   image: {

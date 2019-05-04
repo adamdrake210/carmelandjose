@@ -6,15 +6,15 @@ import { withNamespaces } from '../../i18n';
 import Photos from './Photos';
 
 const styles = theme => ({
-  hero: {
-    alignItems: 'center',
+  content: {
+    alignItems: 'flex-start',
     display: 'flex',
-    paddingTop: '100px',
+    paddingTop: '50px',
     flexDirection: 'column',
-    width: '100%',
+    width: '900px',
     fontFamily: theme.typography.fontFamily,
-    fontSize: '2em',
     height: '100vh',
+    margin: '0 auto',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '4em 2em',
@@ -26,6 +26,8 @@ const styles = theme => ({
   title: {
     padding: '20px 0px',
     color: '#fff',
+    alignItems: 'center',
+    margin: '0 auto',
     [theme.breakpoints.down('xs')]: {
       fontSize: '56px',
     },
@@ -37,6 +39,7 @@ const styles = theme => ({
     },
   },
   info: {
+    padding: '15px 0px 5px',
     color: '#fff',
   },
   infoSecond: {
@@ -48,14 +51,24 @@ const styles = theme => ({
 function Homepage(props) {
   const { classes, t } = props;
   return (
-    <div className={classes.hero}>
-      <Typography variant="h4" className={classes.savedate}>
+    <div className={classes.content}>
+      {/* <Typography variant="h4" className={classes.savedate}>
         {t('save-date')}
-      </Typography>
+      </Typography> */}
       <Typography variant="h1" className={classes.title}>
         {t('h1')}
       </Typography>
-      <Typography variant="h5" className={classes.info}>
+      <Photos />
+      <Typography variant="body1" className={classes.info}>
+        {t('para1')}
+      </Typography>
+      <Typography variant="body1" className={classes.info}>
+        {t('para2')}
+      </Typography>
+      <Typography variant="body1" className={classes.info}>
+        {t('para3')}
+      </Typography>
+      {/* <Typography variant="h5" className={classes.info}>
         {t('where')}
       </Typography>
       <Typography variant="h5" className={classes.infoSecond}>
@@ -63,8 +76,7 @@ function Homepage(props) {
       </Typography>
       <Typography variant="h6" className={classes.info}>
         {t('more-info')}
-      </Typography>
-      <Photos />
+      </Typography> */}
     </div>
   );
 }
