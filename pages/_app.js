@@ -6,6 +6,7 @@ import JssProvider from 'react-jss/lib/JssProvider';
 import AppHeader from '../src/Components/AppHeader/AppHeader';
 import getPageContext from '../src/getPageContext';
 import { appWithTranslation } from '../i18n';
+import { PageTransition } from 'next-page-transitions';
 
 class MyApp extends App {
   constructor(props) {
@@ -53,7 +54,25 @@ class MyApp extends App {
             {/* Pass pageContext to the _document though the renderPage enhancer
                 to render collected styles on server side. */}
             <AppHeader />
-            <Component {...pageProps} pageContext={this.pageContext} />
+            <PageTransition timeout={300} classNames="page-transition">
+              <Component {...pageProps} pageContext={this.pageContext} />
+            </PageTransition>
+            <style jsx global>{`
+              .page-transition-enter {
+                opacity: 0;
+              }
+              .page-transition-enter-active {
+                opacity: 1;
+                transition: opacity 300ms;
+              }
+              .page-transition-exit {
+                opacity: 1;
+              }
+              .page-transition-exit-active {
+                opacity: 0;
+                transition: opacity 300ms;
+              }
+            `}</style>
           </MuiThemeProvider>
         </JssProvider>
       </Container>
