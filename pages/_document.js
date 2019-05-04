@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Document, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
+import { GOOGLE_MAPS_API_KEY } from '../consts/keys';
 
 class MyDocument extends Document {
   render() {
@@ -32,6 +33,12 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script
+            type="text/javascript"
+            src={`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places`}
+            async
+            defer
+          />
         </body>
       </html>
     );
