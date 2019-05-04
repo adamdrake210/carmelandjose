@@ -58,6 +58,12 @@ function AppHeaderDrawer(props) {
             <ListItemText>{t('accommodation')}</ListItemText>
           </ListItem>
         </Link>
+        <Link href="/preboda">
+          <ListItem button>
+            <EditOutlined className={classes.icon} />
+            <ListItemText>{t('preboda')}</ListItemText>
+          </ListItem>
+        </Link>
         <Link href="/wedding">
           <ListItem button>
             <EditOutlined className={classes.icon} />
