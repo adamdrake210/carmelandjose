@@ -7,7 +7,7 @@ import AppHeader from '../src/Components/AppHeader/AppHeader';
 import getPageContext from '../src/getPageContext';
 import { appWithTranslation } from '../i18n';
 import { PageTransition } from 'next-page-transitions';
-
+import Footer from '../src/Components/Footer';
 class MyApp extends App {
   constructor(props) {
     super(props);
@@ -73,6 +73,7 @@ class MyApp extends App {
                 transition: opacity 300ms;
               }
             `}</style>
+            <Footer />
           </MuiThemeProvider>
         </JssProvider>
       </Container>

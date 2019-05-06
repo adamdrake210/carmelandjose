@@ -25,9 +25,6 @@ const styles = theme => ({
     padding: '20px 0px',
     color: '#fff',
     textDecoration: 'underline',
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '56px',
-    },
   },
   subtitle: {
     padding: '20px 0px',

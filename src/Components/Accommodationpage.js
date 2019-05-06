@@ -26,9 +26,6 @@ const styles = theme => ({
     padding: '20px 0px',
     color: '#fff',
     textDecoration: 'underline',
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '56px',
-    },
   },
   subtitle: {
     padding: '20px 0px',
@@ -38,11 +35,6 @@ const styles = theme => ({
   text: {
     padding: '15px 0px 5px',
     color: '#fff',
-  },
-  title: {
-    paddingBottom: '0',
-    color: '#fff',
-    textDecoration: 'underline',
   },
   hoteltext: {
     color: '#fff',

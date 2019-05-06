@@ -39,8 +39,11 @@ const styles = theme => ({
       fontSize: '1.1em',
     },
   },
-  weddingRings: {
-    width: '80px',
+  mobileAppHeader: {
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
   flag: {
     width: '40px',
@@ -99,10 +102,14 @@ class AppHeader extends React.Component {
 
               <div className={classes.grow} />
             </Hidden>
-            <Hidden mdUp implementation="css">
+            <Hidden
+              mdUp
+              className={classes.mobileAppHeader}
+              implementation="css"
+            >
               <Link href="/">
                 <a>
-                  <Typography variant="h4">The Wedding</Typography>
+                  <Typography variant="h5">The Wedding</Typography>
                 </a>
               </Link>
               <div className={classes.grow} />

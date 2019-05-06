@@ -1,3 +1,3 @@
 module.exports = {
-  GOOGLE_MAPS_API_KEY: 'AIzaSyDkNBYLaXysKcAK1P0izxiw5WkwmnyhojM',
+  GOOGLE_MAPS_API_KEY: 'AIzaSyCAE4LKDAN9QsWM4XOWY_wVr9qFh3lm5_U',
 };
