@@ -9,12 +9,12 @@ const styles = theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
-    paddingTop: '50px',
+    paddingTop: '50px 0 70px',
     flexDirection: 'column',
     width: '900px',
     fontFamily: theme.typography.fontFamily,
-    height: '100vh',
     margin: '0 auto',
+    height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '4em 2em',

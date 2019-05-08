@@ -14,13 +14,11 @@ const styles = theme => ({
     },
   },
   windowHeight: {
-    height: '100vh',
     overflow: 'hidden',
     flexWrap: 'nowrap',
     backgroundColor: theme.palette.primary.main,
   },
   transitionalHeight: {
-    height: '100vh',
     overflow: 'scroll',
     flexWrap: 'nowrap',
     backgroundColor: theme.palette.primary.main,

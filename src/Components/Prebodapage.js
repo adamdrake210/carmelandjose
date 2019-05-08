@@ -8,12 +8,12 @@ const styles = theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
-    paddingTop: '50px 0 100px',
+    paddingTop: '50px 0 70px',
     flexDirection: 'column',
     width: '900px',
     fontFamily: theme.typography.fontFamily,
-    margin: '0 auto',
     height: '100vh',
+    margin: '0 auto',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '4em 2em',
@@ -42,43 +42,25 @@ const styles = theme => ({
   },
 });
 
-function Travelpage(props) {
+function Prebodapage(props) {
   const { classes, t } = props;
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
-        {t('traveltitle')}
-      </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
-        {t('flightstitle')}
+        {t('prebodatitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('flightsinfo1')}
+        {t('para1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('flightsinfo2')}
-      </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
-        {t('gettingtitle')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo1')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo2')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo3')}
-      </Typography>
-      <Typography variant="body1" className={classes.boldtext}>
-        {t('moreinfo')}
+        {t('venue')}
       </Typography>
     </div>
   );
 }
 
-Travelpage.propTypes = {
+Prebodapage.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(withNamespaces('travelpage')(Travelpage));
+export default withStyles(styles)(withNamespaces('prebodapage')(Prebodapage));
