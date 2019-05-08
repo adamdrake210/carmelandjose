@@ -14,7 +14,7 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <BottomNavigation className={classes.root} showLabel={false}>
+    <BottomNavigation className={classes.root} showlabel="false">
       <Typography variant="body1">
         {'\u00A9'}
         {` ${new Date().getFullYear()}`} Carmel & Jose

@@ -7,8 +7,14 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
-import HomeOutlined from '@material-ui/icons/HomeOutlined';
-import EditOutlined from '@material-ui/icons/EditOutlined';
+import Home from '@material-ui/icons/Home';
+import FlightTakeoff from '@material-ui/icons/FlightTakeoff';
+import LocalHotel from '@material-ui/icons/LocalHotel';
+import LocalBar from '@material-ui/icons/LocalBar';
+import Wc from '@material-ui/icons/Wc';
+import Pages from '@material-ui/icons/Pages';
+import Cake from '@material-ui/icons/Cake';
+import PregnantWoman from '@material-ui/icons/PregnantWoman';
 
 const drawerWidth = 300;
 
@@ -42,49 +48,49 @@ function AppHeaderDrawer(props) {
       <List>
         <Link href="/">
           <ListItem button>
-            <HomeOutlined className={classes.icon} />
+            <Home className={classes.icon} />
             <ListItemText>{t('home')}</ListItemText>
           </ListItem>
         </Link>
         <Link href="/travel">
           <ListItem button>
-            <EditOutlined className={classes.icon} />
+            <FlightTakeoff className={classes.icon} />
             <ListItemText>{t('travel')}</ListItemText>
           </ListItem>
         </Link>
         <Link href="/accommodation">
           <ListItem button>
-            <EditOutlined className={classes.icon} />
+            <LocalHotel className={classes.icon} />
             <ListItemText>{t('accommodation')}</ListItemText>
           </ListItem>
         </Link>
         <Link href="/preboda">
           <ListItem button>
-            <EditOutlined className={classes.icon} />
+            <LocalBar className={classes.icon} />
             <ListItemText>{t('preboda')}</ListItemText>
           </ListItem>
         </Link>
         <Link href="/wedding">
           <ListItem button>
-            <EditOutlined className={classes.icon} />
+            <Wc className={classes.icon} />
             <ListItemText>{t('wedding')}</ListItemText>
           </ListItem>
         </Link>
         <Link href="/traditions">
           <ListItem button>
-            <EditOutlined className={classes.icon} />
+            <Cake className={classes.icon} />
             <ListItemText>{t('traditions')}</ListItemText>
           </ListItem>
         </Link>
         <Link href="/dresscode">
           <ListItem button>
-            <EditOutlined className={classes.icon} />
+            <PregnantWoman className={classes.icon} />
             <ListItemText>{t('dresscode')}</ListItemText>
           </ListItem>
         </Link>
         <Link href="/giftlist">
           <ListItem button>
-            <EditOutlined className={classes.icon} />
+            <Pages className={classes.icon} />
             <ListItemText>{t('giftlist')}</ListItemText>
           </ListItem>
         </Link>
