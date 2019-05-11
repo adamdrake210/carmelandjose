@@ -13,6 +13,22 @@ const styles = theme => ({
       paddingTop: '64px',
     },
   },
+  content: {
+    alignItems: 'flex-start',
+    display: 'flex',
+    padding: '25px 0 100px',
+    flexDirection: 'column',
+    width: '900px',
+    fontFamily: theme.typography.fontFamily,
+    margin: '0 auto',
+    height: '100vh',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1em',
+      padding: '4em 2em',
+      paddingTop: '1em',
+      height: '100%',
+    },
+  },
   windowHeight: {
     overflow: 'hidden',
     flexWrap: 'nowrap',
@@ -41,7 +57,7 @@ function PageLayout(props) {
 
   return (
     <Grid container className={cssClass}>
-      {children}
+      <div className={classes.content}>{children}</div>
     </Grid>
   );
 }

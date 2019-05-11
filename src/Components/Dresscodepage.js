@@ -11,7 +11,7 @@ const styles = theme => ({
     textDecoration: 'underline',
   },
   subtitle: {
-    padding: '20px 0px',
+    padding: '20px 0px 0px',
     color: '#fff',
     textDecoration: 'underline',
   },
@@ -19,50 +19,41 @@ const styles = theme => ({
     padding: '15px 0px 5px',
     color: '#fff',
   },
-  boldtext: {
-    padding: '15px 0px 5px',
-    color: '#fff',
-    fontWeight: '700',
-  },
 });
 
-function Travelpage(props) {
+function Dresscodepage(props) {
   const { classes, t } = props;
   return (
     <React.Fragment>
       <Typography variant="h4" className={classes.title}>
-        {t('traveltitle')}
+        {t('dresscodetitle')}
       </Typography>
       <Typography variant="h6" className={classes.subtitle}>
-        {t('flightstitle')}
+        {t('para1title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('flightsinfo1')}
+        {t('para1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('flightsinfo2')}
+        {t('para2')}
+      </Typography>
+      <Typography variant="body1" className={classes.text}>
+        {t('para3')}
       </Typography>
       <Typography variant="h6" className={classes.subtitle}>
-        {t('gettingtitle')}
+        {t('para4title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo1')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo2')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo3')}
-      </Typography>
-      <Typography variant="body1" className={classes.boldtext}>
-        {t('moreinfo')}
+        {t('para4')}
       </Typography>
     </React.Fragment>
   );
 }
 
-Travelpage.propTypes = {
+Dresscodepage.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(withNamespaces('travelpage')(Travelpage));
+export default withStyles(styles)(
+  withNamespaces('dresscodepage')(Dresscodepage)
+);

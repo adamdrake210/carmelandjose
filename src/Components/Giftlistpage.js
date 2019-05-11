@@ -26,7 +26,7 @@ const styles = theme => ({
     textDecoration: 'underline',
   },
   subtitle: {
-    padding: '20px 0px',
+    padding: '20px 0px 0px',
     color: '#fff',
     textDecoration: 'underline',
   },
@@ -34,32 +34,27 @@ const styles = theme => ({
     padding: '15px 0px 5px',
     color: '#fff',
   },
-  boldtext: {
-    padding: '15px 0px 5px',
-    color: '#fff',
-    fontWeight: '700',
-  },
 });
 
-function Prebodapage(props) {
+function Giftlistpage(props) {
   const { classes, t } = props;
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
-        {t('prebodatitle')}
+        {t('giftlisttitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('para1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('venue')}
+        {t('para2')}
       </Typography>
     </div>
   );
 }
 
-Prebodapage.propTypes = {
+Giftlistpage.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(withNamespaces('prebodapage')(Prebodapage));
+export default withStyles(styles)(withNamespaces('giftlistpage')(Giftlistpage));

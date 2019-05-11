@@ -9,16 +9,16 @@ const styles = theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
-    padding: '50px 0 70px',
+    padding: '0px 0 70px',
     flexDirection: 'column',
     width: '900px',
     fontFamily: theme.typography.fontFamily,
     margin: '0 auto',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
-      padding: '4em 2em',
-      paddingTop: '1em',
+      padding: '0 0 4em',
       height: '100%',
+      width: '100%',
     },
   },
   title: {

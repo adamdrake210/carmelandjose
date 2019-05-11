@@ -6,30 +6,13 @@ import { withNamespaces } from '../../i18n';
 import Photos from './Photos';
 
 const styles = theme => ({
-  content: {
-    alignItems: 'flex-start',
-    display: 'flex',
-    paddingTop: '50px 0 70px',
-    flexDirection: 'column',
-    width: '900px',
-    fontFamily: theme.typography.fontFamily,
-    margin: '0 auto',
-    height: '100vh',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1em',
-      padding: '4em 2em',
-      paddingTop: '1em',
-      textAlign: 'center',
-      height: '100%',
-    },
-  },
   title: {
     padding: '20px 0px',
     color: '#fff',
     alignItems: 'center',
     margin: '0 auto',
     [theme.breakpoints.down('xs')]: {
-      fontSize: '56px',
+      fontSize: '32px',
     },
   },
   savedate: {
@@ -51,7 +34,7 @@ const styles = theme => ({
 function Homepage(props) {
   const { classes, t } = props;
   return (
-    <div className={classes.content}>
+    <React.Fragment>
       {/* <Typography variant="h4" className={classes.savedate}>
         {t('save-date')}
       </Typography> */}
@@ -77,7 +60,7 @@ function Homepage(props) {
       <Typography variant="h6" className={classes.info}>
         {t('more-info')}
       </Typography> */}
-    </div>
+    </React.Fragment>
   );
 }
 
