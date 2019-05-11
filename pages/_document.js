@@ -25,8 +25,12 @@ class MyDocument extends Document {
             }
           />
           <link
+            href="https://fonts.googleapis.com/css?family=Dancing+Script"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Dancing+Script|Karla|Varela+Round"
+            rel="stylesheet"
           />
           <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
         </Head>

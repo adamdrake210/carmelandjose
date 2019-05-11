@@ -11,14 +11,9 @@ const styles = theme => ({
     color: '#fff',
     alignItems: 'center',
     margin: '0 auto',
+    fontFamily: 'Dancing Script, cursive',
     [theme.breakpoints.down('xs')]: {
       fontSize: '32px',
-    },
-  },
-  savedate: {
-    color: '#fff',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '3em',
     },
   },
   info: {
@@ -29,15 +24,19 @@ const styles = theme => ({
     color: '#fff',
     marginBottom: '2em',
   },
+  boldlinks: {
+    color: '#fff',
+    fontWeight: '700',
+    '&:hover': {
+      color: 'rgba(0,0,0, 0.5)',
+    },
+  },
 });
 
 function Homepage(props) {
   const { classes, t } = props;
   return (
     <React.Fragment>
-      {/* <Typography variant="h4" className={classes.savedate}>
-        {t('save-date')}
-      </Typography> */}
       <Typography variant="h1" className={classes.title}>
         {t('h1')}
       </Typography>
@@ -50,16 +49,14 @@ function Homepage(props) {
       </Typography>
       <Typography variant="body1" className={classes.info}>
         {t('para3')}
+        <a href="mailto:carmel.drake@gmail.com" className={classes.boldlinks}>
+          carmel.drake@gmail.com
+        </a>{' '}
+        {t('or')}{' '}
+        <a href="mailto:castro170376@gmail.com" className={classes.boldlinks}>
+          castro170376@gmail.com
+        </a>
       </Typography>
-      {/* <Typography variant="h5" className={classes.info}>
-        {t('where')}
-      </Typography>
-      <Typography variant="h5" className={classes.infoSecond}>
-        {t('when')}
-      </Typography>
-      <Typography variant="h6" className={classes.info}>
-        {t('more-info')}
-      </Typography> */}
     </React.Fragment>
   );
 }

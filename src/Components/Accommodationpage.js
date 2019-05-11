@@ -56,7 +56,15 @@ function Accommodationpage(props) {
         {t('accomtitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('weddingplace')}
+        {t('weddingplace1')}
+        <a
+          href="http://antiguafabricadeharinas.com"
+          className={classes.links}
+          target="_blank"
+        >
+          Fábrica de Harinas.
+        </a>{' '}
+        {t('weddingplace2')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('metroinfo')}

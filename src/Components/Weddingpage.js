@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
+import Wc from '@material-ui/icons/Wc';
 import MetroMap from './GoogleMaps/MetroMap';
 import { withStyles } from '@material-ui/core/styles';
 import { withNamespaces } from '../../i18n';
@@ -40,12 +41,24 @@ const styles = theme => ({
     color: '#fff',
     fontWeight: '700',
   },
+  iconContainer: {
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'center',
+  },
+  icon: {
+    color: '#fff',
+    fontSize: '120px',
+  },
 });
 
 function Weddingpage(props) {
   const { classes, t } = props;
   return (
     <div className={classes.content}>
+      {/* <div className={classes.iconContainer}>
+        <Wc className={classes.icon} />
+      </div> */}
       <Typography variant="h4" className={classes.title}>
         {t('weddingtitle')}
       </Typography>

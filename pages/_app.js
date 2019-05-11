@@ -55,7 +55,11 @@ class MyApp extends App {
                 to render collected styles on server side. */}
             <AppHeader />
             <PageTransition timeout={300} classNames="page-transition">
-              <Component {...pageProps} pageContext={this.pageContext} />
+              <Component
+                {...pageProps}
+                pageContext={this.pageContext}
+                key={this.pageContext}
+              />
             </PageTransition>
             <style jsx global>{`
               .page-transition-enter {
