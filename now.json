@@ -1,12 +1,4 @@
 {
   "name": "carmel-and-jose",
-  "version": 2,
-  "builds": [
-    { "src": "server.js", "use": "@now/node" },
-    { "src": "package.json", "use": "@now/next" },
-    {
-      "src": "static/*",
-      "use": "@now/static"
-    }
-  ]
+  "version": 1
 }

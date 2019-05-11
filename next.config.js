@@ -1,5 +1,4 @@
 module.exports = {
-  target: 'serverless',
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
@@ -7,7 +6,10 @@ module.exports = {
     };
     return config;
   },
-  env: {
-    localeSubpaths: process.env.LOCALE_SUBPATHS,
+  publicRuntimeConfig: {
+    localeSubpaths:
+      typeof process.env.LOCALE_SUBPATHS === 'string'
+        ? process.env.LOCALE_SUBPATHS
+        : 'none',
   },
 };
