@@ -52,6 +52,9 @@ function Prebodapage(props) {
         {t('para1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
+        {t('para2')}
+      </Typography>
+      <Typography variant="body1" className={classes.text}>
         {t('venue')}
       </Typography>
     </div>

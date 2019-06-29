@@ -68,29 +68,11 @@ function Weddingpage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para2')}
       </Typography>
-      <MetroMap
-        isMarkerShown
-        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={
-          <div style={{ height: `400px`, width: '100%', margin: '25px 0' }} />
-        }
-        mapElement={<div style={{ height: `100%` }} />}
-      />
       <Typography variant="body1" className={classes.text}>
         {t('para3')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('para4')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('para5')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('para6')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('para7')}
       </Typography>
     </div>
   );

@@ -6,6 +6,21 @@ import { withNamespaces } from '../../i18n';
 import Photos from './Photos';
 
 const styles = theme => ({
+  content: {
+    alignItems: 'flex-start',
+    display: 'flex',
+    padding: '0px 0 70px',
+    flexDirection: 'column',
+    width: '900px',
+    fontFamily: theme.typography.fontFamily,
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1em',
+      padding: '0 0 4em',
+      height: '100vh',
+      width: '100%',
+    },
+  },
   title: {
     padding: '20px 0px',
     color: '#fff',
@@ -36,7 +51,7 @@ const styles = theme => ({
 function Homepage(props) {
   const { classes, t } = props;
   return (
-    <React.Fragment>
+    <div className={classes.content}>
       <Typography variant="h1" className={classes.title}>
         {t('h1')}
       </Typography>
@@ -57,7 +72,7 @@ function Homepage(props) {
           jose.silveiro76@gmail.com
         </a>
       </Typography>
-    </React.Fragment>
+    </div>
   );
 }
 
