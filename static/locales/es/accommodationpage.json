@@ -1,14 +1,17 @@
 {
-  "accomtitle": "Accommodation ES",
-  "weddingplace": "The wedding ceremony and celebrations will take place outside of Madrid at La Antigua Fábrica de Harinas (http://antiguafabricadeharinas.com/). Accommodation options near the venue are limited and so we recommend that you stay in the city centre. There are so many hotels and other accommodation options in Madrid that you really will be spoilt for choice. ",
-  "metroinfo": "We recommend that you stay near Alonso Martínez metro station and we have negotiated discounts at several establishments in that area, see below. We will provide buses to and from the venue, which will pick up from and drop off at Alonso Martinez:",
-  "para1": "Alonso Martinez is located in the middle of three classic Madrilenian neighbourhoods (Chamberí, Malasaña and Chueca). It is home to a lovely plaza (Plaza de Santa Bárbara) and is just 20 minutes on foot from the Retiro Park, the Thyssen Art Gallery and Puerta del Sol, and 30 minutes from the Prado and the Reina Sofia.",
-  "para2": "As you might expect, there are also plenty of apartments to rent in the area and throughout the city, although the Town Hall of Madrid recently introduced strict legislation to limit the operation of tourist apartments so be sure to check the latest information in this regard before making any apartment reservations. ",
-  "hoteltitle": "Hotels",
+  "accomtitle": "Alojamiento",
+  "accomnotice": "Aquellos que conocéis bien Madrid, podéis saltaros esta sección.",
+  "weddingplace1": "La ceremonia y el banquete se van a celebrar en una finca en Torremocha de Jarama que se llama ",
+  "weddingplace2": "Hay pocas opciones para dormir cerca de la finca así que nuestra recomendación es que os alojéis por el centro. Hay tantos hoteles en Madrid que vais a tener muchas opciones para elegir.",
+  "metroinfo": "Recomendamos que os alojéis por la zona de Alonso Martínez y hemos pactado descuentos en varios establecimientos por la zona, ver listado debajo. Organizaremos un servicio de autobuses que recogerán y dejarán a los invitados en Alonso Martínez:",
+  "para1": "Alonso Martínez se encuentra situado próximo a  tres barrios clásicos de Madrid (Chamberí, Malasaña y Chueca). Tiene una plaza chula (la de Santa Bárbara) y está a sólo 20 minutos andando desde el Parque del Retiro, el Thyssen y la Puerta del Sol, y a 30 minutos desde el Prado y el Reina Sofía.",
+  "para2": "Además, hay muchos apartamentos que se puede alquiler por la zona y por toda la ciudad. Hace poco, el Ayuntamiento de Madrid aprobó nuevas medidas para restringir la operación de viviendas para uso turístico así que comprobad la última información sobre el tema antes de reservar vuestro apartamento.",
+  "hoteltitle": "Hoteles",
   "hotel1": "1. Hotel Petit Palace Santa Bárbara",
-  "hotelinfo1": "Book through Booking.com if you are a Genius member for a 10% discount. https://www.booking.com/hotel/es/petit-palace-santa-barbara.es.html Otherwise, book through the hotel’s website and use the code BODACARMELYJOSE for a 10% discount. https://www.petitpalacesantabarbara.com/",
+  "hotelinfo1": "Haced vuestra reserva a través de Booking.com si sois socios Genius para conseguir un descuento de un 10%.",
+  "hotelinfo1-2": "Si no, reservad a través de la página web del propio hotel e introducid el código BODACARMELYJOSE para un descuento de un 10%.",
   "hotel2": "2. Hotel NH Alonso Martínez",
-  "hotelinfo2": "We have 20 double rooms reserved for a rate of €155 + VAT (10%) per night including breakfast. Call the hotel (+34 916 008 146) or send them an email (nhalonsomartinez@nh-hotels.com) informing them that you are attending the wedding of Carmel and Jose to reserve one of those rooms.",
+  "hotelinfo2": "Nos han pre-reservado 20 habitaciones dobles a una tarifa de 155€ + IVA (10%) la noche con desayuno incluido. Para reservar una de ellas, llamad al hotel (+34 916 008 146) o enviadles un correo (nhalonsomartinez@nh-hotels.com) mencionándoles la boda de Carmel y Jose.",
   "hotel3": "3. Hotel Urso",
-  "hotelinfo3": "Call the hotel (+34 914 444 458) or send them an email (info@hotelurso.com) informing them that you are attending the wedding of Carmel and Jose for a 10% discount on the tariff listed on their website for your chosen dates."
+  "hotelinfo3": "Podéis llamar al hotel (+34 914 444 458) o enviarles un correo (info@hotelurso.com) mencionando que venís al enlace de Carmel y Jose para obtener un descuento de un 10% sobre la tarifa que aparece en su web para esas fechas "
 }

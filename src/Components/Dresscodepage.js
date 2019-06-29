@@ -28,7 +28,7 @@ function Dresscodepage(props) {
       <Typography variant="h4" className={classes.title}>
         {t('dresscodetitle')}
       </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
+      <Typography variant="h5" className={classes.subtitle}>
         {t('para1title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
@@ -40,7 +40,7 @@ function Dresscodepage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para3')}
       </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
+      <Typography variant="h5" className={classes.subtitle}>
         {t('para4title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>

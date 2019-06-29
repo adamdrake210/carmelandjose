@@ -21,7 +21,7 @@ const styles = theme => ({
   },
 });
 
-function Traditionspage(props) {
+function Logisticspage(props) {
   const { classes, t } = props;
   return (
     <React.Fragment>
@@ -31,7 +31,7 @@ function Traditionspage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para1')}
       </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
+      <Typography variant="h5" className={classes.subtitle}>
         {t('para2title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
@@ -46,7 +46,7 @@ function Traditionspage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para5')}
       </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
+      <Typography variant="h5" className={classes.subtitle}>
         {t('para6title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
@@ -56,10 +56,10 @@ function Traditionspage(props) {
   );
 }
 
-Traditionspage.propTypes = {
+Logisticspage.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(
-  withNamespaces('traditionspage')(Traditionspage)
+  withNamespaces('logisticspage')(Logisticspage)
 );

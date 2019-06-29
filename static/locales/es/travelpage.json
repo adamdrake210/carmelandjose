@@ -1,11 +1,12 @@
 {
-  "traveltitle": "Viajar",
-  "flightstitle": "Flights",
-  "flightsinfo1": "There are more than 25 direct flights a day from London to Madrid with Easyjet, Norwegian, Air Europa, British Airways, Iberia, Iberia Express and others.",
-  "flightsinfo2": "There are also direct flights from most European and US cities, including Bristol, Birmingham, Cardiff, Edinburgh, Lisbon, Prague, Zurich, Tel Aviv and New York. Guests travelling from further afield may want to consider flying into Barcelona and taking an internal flight to Madrid Barajas or catching the AVE train to Madrid Atocha.",
-  "gettingtitle": "Getting to/from Madrid Barajas",
-  "gettinginfo1": "Once you arrive in Madrid, you can take a (white) city taxi from the taxi stand at the airport to the city centre (for a flat fare of €30) or catch the metro (for around €5 per person, depending on your destination). The metro operates from 6am to 1.30am. Uber and Cabify (the Spanish Uber) also serve the airport and tend to charge slightly less than the city cabs (€20-25), unless its rush hour when they may charge more. ",
-  "gettinginfo2": "If you are travelling to Alonso Martinez by metro, you will need to take Line 8 (pink) from the airport to Nuevos Ministerios where you will change onto Line 10 (dark blue - towards Puerta del Sur) for 2 stops to Alonso Martinez. Journey time 25 mins. ",
-  "gettinginfo3": "We recommend using Citymapper to plan your journey to/from the airport. ",
-  "moreinfo": "If you need more information or help planning your trip, please don't hesitate to contact us!"
+  "traveltitle": "Cómo Llegar",
+  "travelnotice": "Aquellos que vivís en Madrid o que conocéis bien la ciudad, podéis saltaros esta sección.",
+  "flightstitle": "Vuelos",
+  "flightsinfo1": "Hay más de 25 vuelos directos a diario desde Londres a Madrid con Easyjet, Norwegian, Air Europa, British Airways, Iberia, Iberia Express, entre otros.",
+  "flightsinfo2": "También hay vuelos directos desde la mayoría de las grandes ciudades en España, el resto de Europa y EEUU, incluso Palma de Mallorca, Sevilla, Toulouse y Vigo. Otra opción para los invitados que viajen desde más lejos es volar a Barcelona y hacer escala allí o coger el AVE hasta Madrid Atocha.",
+  "gettingtitle": "Cómo llegar desde/a Madrid Barajas",
+  "gettinginfo1": "Una vez en Madrid, podéis coger un taxi (normal) desde el aeropuerto al centro de la ciudad (por una tarifa plana de 30€) o coger el metro (por un coste de aprox. 5€ por persona, según el trayecto). El horario del metro es desde las 6h hasta las 1.30h. Uber y Cabify recogen en el aeropuerto también y suelen cobrar un poco menos (20-25€), aunque pueden cobrar más en hora punta.",
+  "gettinginfo2": "Si viajáis en metro a Alonso Martínez, cogeréis la línea 8 (la rosada) desde el aeropuerto hasta Nuevos Ministerios, donde haréis trasbordo a la línea 10 (la azul oscura hacia Puerta del Sur) durante 2 paradas hasta Alonso Martínez. Tiempo de viaje 25 minutos. ",
+  "gettinginfo3": "Recomendamos el uso de la app Citymapper para planificar tu viaje desde/hasta el aeropuerto.",
+  "moreinfo": "Si necesitáis cualquier otra información para planificar vuestro viaje, no dudéis en poneros en contacto con nosotros!"
 }

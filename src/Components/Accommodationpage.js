@@ -55,6 +55,9 @@ function Accommodationpage(props) {
       <Typography variant="h4" className={classes.title}>
         {t('accomtitle')}
       </Typography>
+      <Typography variant="h6" className={classes.subtitle}>
+        {t('accomnotice')}
+      </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('weddingplace1')}
         <a
@@ -62,7 +65,7 @@ function Accommodationpage(props) {
           className={classes.links}
           target="_blank"
         >
-          Fábrica de Harinas.
+          La Antigua Fábrica de Harinas.
         </a>{' '}
         {t('weddingplace2')}
       </Typography>
@@ -84,7 +87,7 @@ function Accommodationpage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para2')}
       </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
+      <Typography variant="h5" className={classes.subtitle}>
         {t('hoteltitle')}
       </Typography>
       <Typography variant="body1" className={classes.title}>

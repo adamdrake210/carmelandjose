@@ -1,10 +1,9 @@
 {
-  "home": "ES Home",
-  "travel": "ES Travel",
-  "accommodation": "ES Accommodation",
-  "preboda": " ES Pre-Boda",
-  "wedding": "ES Wedding",
-  "traditions": "ES Traditions",
-  "dresscode": "ES Dress Code",
-  "giftlist": "ES Gift List"
+  "home": "Home",
+  "travel": "Cómo Llegar",
+  "accommodation": "Alojamiento",
+  "preboda": " Pre-Boda",
+  "wedding": "Boda",
+  "logistics": "Logística",
+  "giftlist": "Lista de boda"
 }

@@ -34,6 +34,9 @@ function Travelpage(props) {
         {t('traveltitle')}
       </Typography>
       <Typography variant="h6" className={classes.subtitle}>
+        {t('travelnotice')}
+      </Typography>
+      <Typography variant="h5" className={classes.subtitle}>
         {t('flightstitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
@@ -42,7 +45,7 @@ function Travelpage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('flightsinfo2')}
       </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
+      <Typography variant="h5" className={classes.subtitle}>
         {t('gettingtitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>

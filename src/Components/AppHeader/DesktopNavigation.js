@@ -50,9 +50,9 @@ function DesktopNavigation(props) {
           <ListItemText>{t('wedding')}</ListItemText>
         </ListItem>
       </Link>
-      <Link href="/traditions">
+      <Link href="/logistics">
         <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('traditions')}</ListItemText>
+          <ListItemText>{t('logistics')}</ListItemText>
         </ListItem>
       </Link>
       <Link href="/dresscode">
