@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Whiteflower from './Svgs/Whiteflower';
 
 const styles = theme => ({
   root: {
@@ -40,6 +41,10 @@ const styles = theme => ({
     backgroundColor: theme.palette.primary.main,
     WebkitOverflowScrolling: 'touch',
   },
+  svg: {
+    width: '200px',
+    height: '230px',
+  },
 });
 
 function PageLayout(props) {
@@ -57,6 +62,7 @@ function PageLayout(props) {
 
   return (
     <Grid container className={cssClass}>
+      <Whiteflower />
       <div className={classes.content}>{children}</div>
     </Grid>
   );
