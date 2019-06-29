@@ -28,9 +28,12 @@ const theme = createMuiTheme({
   },
   typography: {
     useNextVariants: true,
-    fontFamily: ['Montserrat', '"Helvetica Neue"', 'Arial', 'sans-serif'].join(
-      ','
-    ),
+    fontFamily: [
+      '"Varela Round", sans-serif',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+    ].join(','),
   },
 });
 

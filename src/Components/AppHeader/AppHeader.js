@@ -8,9 +8,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
+
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { i18n, withNamespaces } from '../../../i18n';
+import { Typography } from '@material-ui/core';
+import AppHeaderDrawer from './AppHeaderDrawer';
+import DesktopNavigation from './DesktopNavigation';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -27,6 +31,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   appBar: {
+    backgroundColor: 'white',
     zIndex: theme.zIndex.drawer + 1,
     '& a': {
       color: '#fff',
@@ -34,52 +39,80 @@ const styles = theme => ({
       fontSize: '1.1em',
     },
   },
+  mobileAppHeader: {
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+  },
+  flag: {
+    width: '40px',
+  },
 });
 
 class AppHeader extends React.Component {
   state = {
     drawerOpen: false,
+    lang: true,
   };
 
-  handleDialogClose = () => this.setState({ dialogOpen: false });
+  // handleDialogClose = () => this.setState({ dialogOpen: false });
 
-  handleDialogOpen = () => this.setState({ dialogOpen: true });
+  // handleDialogOpen = () => this.setState({ dialogOpen: true });
 
   handleDrawerToggle = () => {
     this.setState(state => ({ drawerOpen: !state.drawerOpen }));
   };
 
+  changeFlag = () => {
+    this.setState(prevState => ({
+      lang: !prevState.lang,
+    }));
+  };
+
   render() {
     const { classes, t } = this.props;
-    const { drawerOpen } = this.state;
+    const { drawerOpen, lang } = this.state;
 
     return (
       <div className={classes.root}>
-        <AppBar color="primary" className={classes.appBar}>
+        <AppBar className={classes.appBar}>
           <Toolbar>
             <div className={classes.grow}>
               {/* <Link href="/search">
                 <a>RSVP</a>
               </Link> */}
               <Button
-                variant="contained"
-                color="secondary"
-                onClick={() =>
-                  i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')
-                }
+                onClick={() => {
+                  i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
+                  this.changeFlag();
+                }}
               >
-                {t('change-locale')}
+                {/* {t('change-locale')} */}
+                {lang === true && (
+                  <img className={classes.flag} src="./static/spain.png" />
+                )}
+                {lang === false && (
+                  <img className={classes.flag} src="./../static/uk.png" />
+                )}
               </Button>
             </div>
-            <Link href="/">
-              <a>
-                {/* <img src="/static/logo.svg" /> */}
-                <h2>The Wedding!</h2>
-              </a>
-            </Link>
-            <div className={classes.grow} />
+            <Hidden mdDown implementation="css">
+              <DesktopNavigation />
 
-            {/* <Hidden mdUp implementation="css">
+              <div className={classes.grow} />
+            </Hidden>
+            <Hidden
+              mdUp
+              className={classes.mobileAppHeader}
+              implementation="css"
+            >
+              <Link href="/">
+                <a>
+                  <Typography variant="h5">The Wedding</Typography>
+                </a>
+              </Link>
+              <div className={classes.grow} />
               <IconButton
                 color="inherit"
                 aria-label="Open drawer"
@@ -88,15 +121,14 @@ class AppHeader extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
-            </Hidden> */}
+            </Hidden>
           </Toolbar>
         </AppBar>
 
-        {/* <AppHeaderDrawer
-          user={user}
+        <AppHeaderDrawer
           drawerOpen={drawerOpen}
           handleDrawerToggle={this.handleDrawerToggle}
-        /> */}
+        />
       </div>
     );
   }

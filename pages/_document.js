@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Document, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
+import { GOOGLE_MAPS_API_KEY } from '../consts/keys';
 
 class MyDocument extends Document {
   render() {
@@ -24,14 +25,24 @@ class MyDocument extends Document {
             }
           />
           <link
+            href="https://fonts.googleapis.com/css?family=Dancing+Script"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Dancing+Script|Karla|Varela+Round"
+            rel="stylesheet"
           />
           <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <script
+            type="text/javascript"
+            src={`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places`}
+            async
+            defer
+          />
         </body>
       </html>
     );

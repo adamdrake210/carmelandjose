@@ -2,9 +2,10 @@
   "name": "carmel-and-jose",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "now-build": "next build",
     "start": "next start"
   },
+  "license": "UNLICENSED",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
@@ -12,9 +13,11 @@
     "express": "^4.16.4",
     "next": "^8.0.3",
     "next-i18next": "^0.36.2",
+    "next-page-transitions": "^1.0.0-beta.2",
     "nprogress": "^0.2.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-google-maps": "^9.4.5",
     "react-jss": "^8.6.1"
   },
   "devDependencies": {

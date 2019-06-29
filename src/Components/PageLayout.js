@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Whiteflower from './Svgs/Whiteflower';
 
 const styles = theme => ({
   root: {
@@ -13,17 +14,36 @@ const styles = theme => ({
       paddingTop: '64px',
     },
   },
-  windowHeight: {
+  content: {
+    alignItems: 'flex-start',
+    display: 'flex',
+    padding: '25px 0 100px',
+    flexDirection: 'column',
+    width: '900px',
+    fontFamily: theme.typography.fontFamily,
+    margin: '0 auto 4em',
     height: '100vh',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1em',
+      padding: '4em 2em',
+      paddingTop: '1em',
+      height: '100%',
+    },
+  },
+  windowHeight: {
     overflow: 'hidden',
     flexWrap: 'nowrap',
+    backgroundColor: theme.palette.primary.main,
   },
   transitionalHeight: {
-    [theme.breakpoints.up('lg')]: {
-      height: '100vh',
-      overflow: 'scroll',
-      flexWrap: 'nowrap',
-    },
+    overflow: 'scroll',
+    flexWrap: 'nowrap',
+    backgroundColor: theme.palette.primary.main,
+    WebkitOverflowScrolling: 'touch',
+  },
+  svg: {
+    width: '200px',
+    height: '230px',
   },
 });
 
@@ -42,7 +62,8 @@ function PageLayout(props) {
 
   return (
     <Grid container className={cssClass}>
-      {children}
+      <Whiteflower />
+      <div className={classes.content}>{children}</div>
     </Grid>
   );
 }
