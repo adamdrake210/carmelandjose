@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import { withNamespaces } from '../../i18n';
+import MetroMap from './GoogleMaps/MetroMap';
 
 const styles = theme => ({
   title: {
@@ -19,6 +20,13 @@ const styles = theme => ({
     padding: '15px 0px 5px',
     color: '#fff',
   },
+  boldlinks: {
+    color: '#fff',
+    fontWeight: '700',
+    '&:hover': {
+      color: 'rgba(0,0,0, 0.5)',
+    },
+  },
 });
 
 function Logisticspage(props) {
@@ -26,14 +34,20 @@ function Logisticspage(props) {
   return (
     <React.Fragment>
       <Typography variant="h4" className={classes.title}>
-        {t('traditionstitle')}
+        {t('logisticsstitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('para1')}
       </Typography>
-      <Typography variant="h5" className={classes.subtitle}>
-        {t('para2title')}
-      </Typography>
+      <MetroMap
+        isMarkerShown
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={
+          <div style={{ height: `400px`, width: '100%', margin: '25px 0' }} />
+        }
+        mapElement={<div style={{ height: `100%` }} />}
+      />
       <Typography variant="body1" className={classes.text}>
         {t('para2')}
       </Typography>
@@ -43,15 +57,18 @@ function Logisticspage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para4')}
       </Typography>
+      <Typography variant="h5" className={classes.subtitle}>
+        {t('para5title')}
+      </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('para5')}
       </Typography>
-      <Typography variant="h5" className={classes.subtitle}>
-        {t('para6title')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('para6')}
-      </Typography>
+      <a
+        href="https://weatherspark.com/m/36848/6/Average-Weather-in-June-in-Madrid-Spain"
+        className={classes.boldlinks}
+      >
+        {t('para6link')}
+      </a>
     </React.Fragment>
   );
 }

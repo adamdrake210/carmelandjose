@@ -41,7 +41,9 @@ const styles = theme => ({
 });
 
 function AppHeaderDrawer(props) {
-  const { classes, t, drawerOpen, handleDrawerToggle } = props;
+  const { classes, t, drawerOpen, handleDrawerToggle, lng } = props;
+
+  console.log(lng);
 
   const drawer = (
     <React.Fragment>
@@ -82,12 +84,14 @@ function AppHeaderDrawer(props) {
             <ListItemText>{t('logistics')}</ListItemText>
           </ListItem>
         </Link>
-        <Link href="/dresscode">
-          <ListItem button>
-            <PregnantWoman className={classes.icon} />
-            <ListItemText>{t('dresscode')}</ListItemText>
-          </ListItem>
-        </Link>
+        {lng === 'en' && (
+          <Link href="/dresscode">
+            <ListItem button>
+              <PregnantWoman className={classes.icon} />
+              <ListItemText>{t('dresscode')}</ListItemText>
+            </ListItem>
+          </Link>
+        )}
         <Link href="/giftlist">
           <ListItem button>
             <Pages className={classes.icon} />

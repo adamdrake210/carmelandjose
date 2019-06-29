@@ -21,7 +21,7 @@ const styles = theme => ({
     flexDirection: 'column',
     width: '900px',
     fontFamily: theme.typography.fontFamily,
-    margin: '0 auto',
+    margin: '0 auto 4em',
     height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',

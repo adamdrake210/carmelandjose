@@ -22,7 +22,7 @@ const styles = theme => ({
 });
 
 function DesktopNavigation(props) {
-  const { t, classes } = props;
+  const { t, classes, lng } = props;
   return (
     <List className={classes.nav}>
       <Link href="/">
@@ -55,11 +55,13 @@ function DesktopNavigation(props) {
           <ListItemText>{t('logistics')}</ListItemText>
         </ListItem>
       </Link>
-      <Link href="/dresscode">
-        <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('dresscode')}</ListItemText>
-        </ListItem>
-      </Link>
+      {lng === 'en' && (
+        <Link href="/dresscode">
+          <ListItem button className={classes.buttonNav}>
+            <ListItemText>{t('dresscode')}</ListItemText>
+          </ListItem>
+        </Link>
+      )}
       <Link href="/giftlist">
         <ListItem button className={classes.buttonNav}>
           <ListItemText>{t('giftlist')}</ListItemText>
