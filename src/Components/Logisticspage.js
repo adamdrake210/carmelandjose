@@ -9,7 +9,6 @@ const styles = theme => ({
   title: {
     padding: '20px 0px',
     color: '#fff',
-    textDecoration: 'underline',
   },
   subtitle: {
     padding: '20px 0px 0px',
@@ -69,6 +68,12 @@ function Logisticspage(props) {
       >
         {t('para6link')}
       </a>
+      <Typography variant="h5" className={classes.subtitle}>
+        {t('para7title')}
+      </Typography>
+      <Typography variant="body1" className={classes.text}>
+        {t('para7')}
+      </Typography>
     </React.Fragment>
   );
 }

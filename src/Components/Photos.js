@@ -12,8 +12,8 @@ const styles = theme => ({
     },
   },
   image: {
-    width: '200px',
-    height: '260px',
+    width: '100%',
+    maxWidth: '300px',
     margin: '10px',
     border: 'solid 2px #fff',
   },

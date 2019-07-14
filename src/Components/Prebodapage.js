@@ -23,7 +23,6 @@ const styles = theme => ({
   title: {
     padding: '20px 0px',
     color: '#fff',
-    textDecoration: 'underline',
   },
   subtitle: {
     padding: '20px 0px',
