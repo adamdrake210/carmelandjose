@@ -13,7 +13,7 @@ import LocalHotel from '@material-ui/icons/LocalHotel';
 import LocalBar from '@material-ui/icons/LocalBar';
 import Wc from '@material-ui/icons/Wc';
 import Pages from '@material-ui/icons/Pages';
-import Cake from '@material-ui/icons/Cake';
+import SwapHoriz from '@material-ui/icons/SwapHoriz';
 import PregnantWoman from '@material-ui/icons/PregnantWoman';
 
 const drawerWidth = 300;
@@ -80,7 +80,7 @@ function AppHeaderDrawer(props) {
         </Link>
         <Link href="/logistics">
           <ListItem button>
-            <Cake className={classes.icon} />
+            <SwapHoriz className={classes.icon} />
             <ListItemText>{t('logistics')}</ListItemText>
           </ListItem>
         </Link>

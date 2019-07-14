@@ -3,7 +3,7 @@ import Travelpage from '../src/Components/Travelpage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Travel = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <Travelpage />
   </PageLayout>
 );

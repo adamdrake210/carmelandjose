@@ -15,10 +15,10 @@ const styles = theme => ({
     width: '900px',
     fontFamily: theme.typography.fontFamily,
     margin: '0 auto',
+    height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '0 0 4em',
-      height: '100%',
       width: '100%',
     },
   },

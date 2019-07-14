@@ -3,7 +3,7 @@ import Homepage from '../src/Components/Homepage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Home = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <Homepage />
 
     {/* <div className="row">

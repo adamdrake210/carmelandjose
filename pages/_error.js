@@ -3,7 +3,7 @@ import Travelpage from '../src/Components/Travelpage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Errorpage = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <h1>This is an error. Go back!</h1>
   </PageLayout>
 );
