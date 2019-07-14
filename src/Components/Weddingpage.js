@@ -25,7 +25,6 @@ const styles = theme => ({
   title: {
     padding: '20px 0px',
     color: '#fff',
-    textDecoration: 'underline',
   },
   subtitle: {
     padding: '20px 0px',
@@ -50,6 +49,20 @@ const styles = theme => ({
     color: '#fff',
     fontSize: '120px',
   },
+  imageRow: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
+  },
+  image: {
+    width: '100%',
+    maxWidth: '600px',
+    margin: '10px',
+    border: 'solid 2px #fff',
+  },
 });
 
 function Weddingpage(props) {
@@ -62,11 +75,11 @@ function Weddingpage(props) {
       <Typography variant="h4" className={classes.title}>
         {t('weddingtitle')}
       </Typography>
+      <div className={classes.imageRow}>
+        <img src="./static/weddingvenue.jpg" className={classes.image} />
+      </div>
       <Typography variant="body1" className={classes.text}>
         {t('para1')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('para2')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('para3')}
