@@ -3,7 +3,7 @@ import Dresscodepage from '../src/Components/Dresscodepage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Dresscode = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <Dresscodepage />
   </PageLayout>
 );

@@ -3,7 +3,7 @@ import Logisticspage from '../src/Components/Logisticspage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Logistics = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <Logisticspage />
   </PageLayout>
 );

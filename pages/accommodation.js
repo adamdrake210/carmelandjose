@@ -3,7 +3,7 @@ import Accommodationpage from '../src/Components/Accommodationpage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Accommodation = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <Accommodationpage />
   </PageLayout>
 );

@@ -13,6 +13,7 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       paddingTop: '64px',
     },
+    backgroundColor: theme.palette.primary.main,
   },
   content: {
     alignItems: 'flex-start',
@@ -22,7 +23,6 @@ const styles = theme => ({
     width: '900px',
     fontFamily: theme.typography.fontFamily,
     margin: '0 auto 4em',
-    height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '4em 2em',
@@ -30,38 +30,13 @@ const styles = theme => ({
       height: '100%',
     },
   },
-  windowHeight: {
-    overflow: 'hidden',
-    flexWrap: 'nowrap',
-    backgroundColor: theme.palette.primary.main,
-  },
-  transitionalHeight: {
-    overflow: 'scroll',
-    flexWrap: 'nowrap',
-    backgroundColor: theme.palette.primary.main,
-    WebkitOverflowScrolling: 'touch',
-  },
-  svg: {
-    width: '200px',
-    height: '230px',
-  },
 });
 
 function PageLayout(props) {
-  const { children, classes, height } = props;
-
-  let cssClass = classes.root;
-
-  if (height === 'window') {
-    cssClass = `${cssClass} ${classes.windowHeight}`;
-  }
-
-  if (height === 'transitional') {
-    cssClass = `${cssClass} ${classes.transitionalHeight}`;
-  }
+  const { children, classes } = props;
 
   return (
-    <Grid container className={cssClass}>
+    <Grid container className={classes.root}>
       <Whiteflower />
       <div className={classes.content}>{children}</div>
     </Grid>
