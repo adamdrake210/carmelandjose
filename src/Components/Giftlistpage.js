@@ -13,17 +13,17 @@ const styles = theme => ({
     width: '900px',
     fontFamily: theme.typography.fontFamily,
     margin: '0 auto',
+    height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '0 0 4em',
-      height: '100vh',
+
       width: '100%',
     },
   },
   title: {
     padding: '20px 0px',
     color: '#fff',
-    textDecoration: 'underline',
   },
   subtitle: {
     padding: '20px 0px 0px',

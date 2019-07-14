@@ -12,18 +12,22 @@ const styles = theme => ({
     },
   },
   image: {
-    width: '200px',
-    height: '260px',
+    width: '100%',
+    maxWidth: '300px',
     margin: '10px',
     border: 'solid 2px #fff',
   },
 });
 
 function Photos(props) {
-  const { classes } = props;
+  const { classes, lng } = props;
   return (
     <div className={classes.imageRow}>
-      <img src="./static/IMG_4086.JPG" className={classes.image} />
+      {lng === 'en' ? (
+        <img src="./static/IMG_4086.JPG" className={classes.image} />
+      ) : (
+        <img src="./../static/IMG_4086.JPG" className={classes.image} />
+      )}
     </div>
   );
 }

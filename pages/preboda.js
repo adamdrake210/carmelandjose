@@ -3,7 +3,7 @@ import Prebodapage from '../src/Components/Prebodapage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Preboda = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <Prebodapage />
   </PageLayout>
 );

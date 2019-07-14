@@ -3,7 +3,7 @@ import Weddingpage from '../src/Components/Weddingpage';
 import PageLayout from '../src/Components/PageLayout';
 
 const Wedding = () => (
-  <PageLayout height="transitional">
+  <PageLayout>
     <Weddingpage />
   </PageLayout>
 );

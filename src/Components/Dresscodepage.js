@@ -5,10 +5,24 @@ import { withStyles } from '@material-ui/core/styles';
 import { withNamespaces } from '../../i18n';
 
 const styles = theme => ({
+  content: {
+    alignItems: 'flex-start',
+    display: 'flex',
+    padding: '0px 0 70px',
+    flexDirection: 'column',
+    width: '900px',
+    fontFamily: theme.typography.fontFamily,
+    margin: '0 auto',
+    height: '100vh',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1em',
+      padding: '0 0 4em',
+      width: '100%',
+    },
+  },
   title: {
     padding: '20px 0px',
     color: '#fff',
-    textDecoration: 'underline',
   },
   subtitle: {
     padding: '20px 0px 0px',
@@ -24,7 +38,7 @@ const styles = theme => ({
 function Dresscodepage(props) {
   const { classes, t } = props;
   return (
-    <React.Fragment>
+    <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
         {t('dresscodetitle')}
       </Typography>
@@ -46,7 +60,7 @@ function Dresscodepage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para4')}
       </Typography>
-    </React.Fragment>
+    </div>
   );
 }
 
