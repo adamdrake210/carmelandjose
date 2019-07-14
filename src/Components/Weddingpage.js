@@ -20,6 +20,7 @@ const styles = theme => ({
       fontSize: '1em',
       padding: '0 0 4em',
       width: '100%',
+      height: '100%',
     },
   },
   title: {
@@ -66,7 +67,7 @@ const styles = theme => ({
 });
 
 function Weddingpage(props) {
-  const { classes, t } = props;
+  const { classes, t, lng } = props;
   return (
     <div className={classes.content}>
       {/* <div className={classes.iconContainer}>
@@ -76,7 +77,11 @@ function Weddingpage(props) {
         {t('weddingtitle')}
       </Typography>
       <div className={classes.imageRow}>
-        <img src="./static/weddingvenue.jpg" className={classes.image} />
+        {lng === 'en' ? (
+          <img src="./static/weddingvenue.jpg" className={classes.image} />
+        ) : (
+          <img src="./../static/weddingvenue.jpg" className={classes.image} />
+        )}
       </div>
       <Typography variant="body1" className={classes.text}>
         {t('para1')}
