@@ -20,10 +20,14 @@ const styles = theme => ({
 });
 
 function Photos(props) {
-  const { classes } = props;
+  const { classes, lng } = props;
   return (
     <div className={classes.imageRow}>
-      <img src="./static/IMG_4086.JPG" className={classes.image} />
+      {lng === 'en' ? (
+        <img src="./static/IMG_4086.JPG" className={classes.image} />
+      ) : (
+        <img src="./../static/IMG_4086.JPG" className={classes.image} />
+      )}
     </div>
   );
 }

@@ -49,13 +49,13 @@ const styles = theme => ({
 });
 
 function Homepage(props) {
-  const { classes, t } = props;
+  const { classes, t, lng } = props;
   return (
     <div className={classes.content}>
       <Typography variant="h1" className={classes.title}>
         {t('h1')}
       </Typography>
-      <Photos />
+      <Photos lng={lng} />
       <Typography variant="body1" className={classes.info}>
         {t('para1')}
       </Typography>
