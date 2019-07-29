@@ -13,6 +13,7 @@ const styles = theme => ({
   },
   image: {
     width: '100%',
+    height: '100%',
     maxWidth: '300px',
     margin: '10px',
     border: 'solid 2px #fff',

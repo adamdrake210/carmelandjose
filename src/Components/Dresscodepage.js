@@ -36,7 +36,7 @@ const styles = theme => ({
 });
 
 function Dresscodepage(props) {
-  const { classes, t } = props;
+  const { classes, t, lng } = props;
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
@@ -50,9 +50,6 @@ function Dresscodepage(props) {
       </Typography>
       <Typography variant="body1" className={classes.text}>
         {t('para2')}
-      </Typography>
-      <Typography variant="body1" className={classes.text}>
-        {t('para3')}
       </Typography>
       <Typography variant="h5" className={classes.subtitle}>
         {t('para4title')}

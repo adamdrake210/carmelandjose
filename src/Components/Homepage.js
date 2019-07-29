@@ -14,10 +14,11 @@ const styles = theme => ({
     width: '900px',
     fontFamily: theme.typography.fontFamily,
     margin: '0 auto',
+    height: '100vh',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1em',
       padding: '0 0 4em',
-      height: '100vh',
+      height: '100%',
       width: '100%',
     },
   },
@@ -46,6 +47,20 @@ const styles = theme => ({
       color: 'rgba(0,0,0, 0.5)',
     },
   },
+  imageRow: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
+  },
+  image: {
+    width: '100%',
+    maxWidth: '300px',
+    margin: '10px',
+    border: 'solid 2px #fff',
+  },
 });
 
 function Homepage(props) {
@@ -55,7 +70,14 @@ function Homepage(props) {
       <Typography variant="h1" className={classes.title}>
         {t('h1')}
       </Typography>
-      <Photos lng={lng} />
+      <div className={classes.imageRow}>
+        {lng === 'en' ? (
+          <img src="./static/IMG_4086.JPG" className={classes.image} />
+        ) : (
+          <img src="./../static/IMG_4086.JPG" className={classes.image} />
+        )}
+      </div>
+
       <Typography variant="body1" className={classes.info}>
         {t('para1')}
       </Typography>
