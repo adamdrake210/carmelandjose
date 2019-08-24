@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Whiteflower from './Svgs/Whiteflower';
+import { initGA, logPageView } from '../utils/analytics';
 
 const styles = theme => ({
   root: {
@@ -34,6 +35,14 @@ const styles = theme => ({
 
 function PageLayout(props) {
   const { children, classes } = props;
+
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }, []);
 
   return (
     <Grid container className={classes.root}>
