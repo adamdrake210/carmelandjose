@@ -112,7 +112,7 @@ function Accommodationpage(props) {
           Get Your Discount!
         </a>
       </Typography>
-      <Typography variant="body1" className={classes.title}>
+      {/* <Typography variant="body1" className={classes.title}>
         {t('hotel2')}
       </Typography>
       <Typography variant="body1" className={classes.hoteltext}>
@@ -124,7 +124,7 @@ function Accommodationpage(props) {
         >
           More Info Here
         </a>
-      </Typography>
+      </Typography> */}
 
       <Typography variant="body1" className={classes.title}>
         {t('hotel3')}
@@ -137,6 +137,24 @@ function Accommodationpage(props) {
           target="_blank"
         >
           More Info Here
+        </a>
+      </Typography>
+      <Typography variant="body1" className={classes.hoteltext}>
+        {t('extrahotels1')}{' '}
+        <a
+          href="https://goo.gl/maps/XueywcDsuAQ4t81WA"
+          className={classes.links}
+          target="_blank"
+        >
+          NH Madrid Alonso Martínez
+        </a>
+        {t('extrahotels2')}{' '}
+        <a
+          href="https://goo.gl/maps/5hwNEkXgq48zdnWF7"
+          className={classes.links}
+          target="_blank"
+        >
+          Hotel Sardinero Madrid
         </a>
       </Typography>
     </div>
