@@ -43,8 +43,6 @@ const styles = theme => ({
 function AppHeaderDrawer(props) {
   const { classes, t, drawerOpen, handleDrawerToggle, lng } = props;
 
-  console.log(lng);
-
   const drawer = (
     <React.Fragment>
       <List>
