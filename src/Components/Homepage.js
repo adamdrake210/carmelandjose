@@ -82,6 +82,9 @@ function Homepage(props) {
         {t('para1')}
       </Typography>
       <Typography variant="body1" className={classes.info}>
+        {t('para2')}
+      </Typography>
+      <Typography variant="body1" className={classes.info}>
         {t('para3')}
         <a href="mailto:carmel.drake@gmail.com" className={classes.boldlinks}>
           carmel.drake@gmail.com
