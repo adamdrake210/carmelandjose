@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import { withNamespaces } from '../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
+import { withTranslation } from '../../i18n';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
@@ -38,10 +38,10 @@ const styles = theme => ({
     color: '#fff',
     fontWeight: '700',
   },
-});
+}));
 
-function Prebodapage(props) {
-  const { classes, t } = props;
+function Prebodapage({ t }) {
+  const classes = useStyles();
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
@@ -60,8 +60,4 @@ function Prebodapage(props) {
   );
 }
 
-Prebodapage.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(withNamespaces('prebodapage')(Prebodapage));
+export default withTranslation('prebodapage')(Prebodapage);

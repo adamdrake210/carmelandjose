@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Wc from '@material-ui/icons/Wc';
 import MetroMap from './GoogleMaps/MetroMap';
-import { withStyles } from '@material-ui/core/styles';
-import { withNamespaces } from '../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
+import { withTranslation } from '../../i18n';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
@@ -64,10 +64,10 @@ const styles = theme => ({
     margin: '10px',
     border: 'solid 2px #fff',
   },
-});
+}));
 
-function Weddingpage(props) {
-  const { classes, t, lng } = props;
+function Weddingpage({ t, lng }) {
+  const classes = useStyles();
   return (
     <div className={classes.content}>
       {/* <div className={classes.iconContainer}>
@@ -96,8 +96,4 @@ function Weddingpage(props) {
   );
 }
 
-Weddingpage.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(withNamespaces('weddingpage')(Weddingpage));
+export default withTranslation('weddingpage')(Weddingpage);

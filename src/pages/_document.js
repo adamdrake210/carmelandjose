@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Document, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
-import { GOOGLE_MAPS_API_KEY } from '../consts/keys';
+import { GOOGLE_MAPS_API_KEY } from '../../consts/keys';
 
 class MyDocument extends Document {
   render() {

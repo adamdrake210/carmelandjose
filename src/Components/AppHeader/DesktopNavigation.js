@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Link, i18n, withNamespaces } from '../../../i18n';
-import { withStyles } from '@material-ui/core/styles';
+import { Link, i18n, withTranslation } from '../../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   nav: {
     display: 'flex',
     padding: '0',
@@ -19,10 +18,11 @@ const styles = theme => ({
       backgroundColor: 'rgba(255,152,0, 0.2)',
     },
   },
-});
+}));
 
-function DesktopNavigation(props) {
-  const { t, classes, lng } = props;
+function DesktopNavigation({ t, lng }) {
+  const classes = useStyles();
+
   return (
     <List className={classes.nav}>
       <Link href="/">
@@ -71,8 +71,4 @@ function DesktopNavigation(props) {
   );
 }
 
-DesktopNavigation.propTypes = {};
-
-export default withStyles(styles)(
-  withNamespaces('appheaderdrawer')(DesktopNavigation)
-);
+export default withTranslation('appheaderdrawer')(DesktopNavigation);

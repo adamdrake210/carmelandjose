@@ -1,6 +1,6 @@
 import React from 'react';
-import Prebodapage from '../src/Components/Prebodapage';
-import PageLayout from '../src/Components/PageLayout';
+import Prebodapage from '../Components/Prebodapage';
+import PageLayout from '../Components/PageLayout';
 
 const Preboda = () => (
   <PageLayout>

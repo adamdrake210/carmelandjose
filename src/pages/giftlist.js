@@ -1,6 +1,6 @@
 import React from 'react';
-import Giftlistpage from '../src/Components/Giftlistpage';
-import PageLayout from '../src/Components/PageLayout';
+import Giftlistpage from '../Components/Giftlistpage';
+import PageLayout from '../Components/PageLayout';
 
 const Giftlist = () => (
   <PageLayout>

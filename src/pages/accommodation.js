@@ -1,6 +1,6 @@
 import React from 'react';
-import Accommodationpage from '../src/Components/Accommodationpage';
-import PageLayout from '../src/Components/PageLayout';
+import Accommodationpage from '../Components/Accommodationpage';
+import PageLayout from '../Components/PageLayout';
 
 const Accommodation = () => (
   <PageLayout>

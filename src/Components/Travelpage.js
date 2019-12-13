@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import { withNamespaces } from '../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
+import { withTranslation } from '../../i18n';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   title: {
     padding: '20px 0px',
     color: '#fff',
@@ -23,10 +23,10 @@ const styles = theme => ({
     color: '#fff',
     fontWeight: '700',
   },
-});
+}));
 
-function Travelpage(props) {
-  const { classes, t } = props;
+function Travelpage({ t }) {
+  const classes = useStyles();
   return (
     <React.Fragment>
       <Typography variant="h4" className={classes.title}>
@@ -63,8 +63,4 @@ function Travelpage(props) {
   );
 }
 
-Travelpage.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(withNamespaces('travelpage')(Travelpage));
+export default withTranslation('travelpage')(Travelpage);

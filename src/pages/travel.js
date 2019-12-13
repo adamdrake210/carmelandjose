@@ -1,6 +1,6 @@
 import React from 'react';
-import Travelpage from '../src/Components/Travelpage';
-import PageLayout from '../src/Components/PageLayout';
+import Travelpage from '../Components/Travelpage';
+import PageLayout from '../Components/PageLayout';
 
 const Travel = () => (
   <PageLayout>

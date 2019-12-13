@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Whiteflower from './Svgs/Whiteflower';
 import { initGA, logPageView } from '../utils/analytics';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: '56px',
     '@media (min-width:0px) and (orientation: landscape)': {
@@ -31,10 +31,10 @@ const styles = theme => ({
       height: '100%',
     },
   },
-});
+}));
 
-function PageLayout(props) {
-  const { children, classes } = props;
+function PageLayout({ children }) {
+  const classes = useStyles();
 
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
@@ -54,8 +54,7 @@ function PageLayout(props) {
 
 PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  classes: PropTypes.object.isRequired,
   height: PropTypes.oneOf(['window', 'transitional']),
 };
 
-export default withStyles(styles)(PageLayout);
+export default PageLayout;

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   imageRow: {
     display: 'flex',
     alignItems: 'center',
@@ -18,10 +18,10 @@ const styles = theme => ({
     margin: '10px',
     border: 'solid 2px #fff',
   },
-});
+}));
 
-function Photos(props) {
-  const { classes, lng } = props;
+function Photos({ lng }) {
+  const classes = useStyles();
   return (
     <div className={classes.imageRow}>
       {lng === 'en' ? (
@@ -33,6 +33,4 @@ function Photos(props) {
   );
 }
 
-Photos.propTypes = {};
-
-export default withStyles(styles)(Photos);
+export default Photos;

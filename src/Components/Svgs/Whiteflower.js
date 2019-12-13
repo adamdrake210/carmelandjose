@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   svg: {
     width: '250px',
     height: '280px',
@@ -13,10 +13,10 @@ const styles = theme => ({
       display: 'none',
     },
   },
-});
+}));
 
-function Whiteflower(props) {
-  const { classes } = props;
+function Whiteflower() {
+  const classes = useStyles();
   return (
     <svg
       className={classes.svg}
@@ -331,8 +331,4 @@ c21 -6 57 -28 79 -48 36 -34 41 -44 45 -93 7 -84 -18 -147 -80 -202 -59 -54
   );
 }
 
-Whiteflower.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(Whiteflower);
+export default Whiteflower;

@@ -1,6 +1,6 @@
 import React from 'react';
-import Logisticspage from '../src/Components/Logisticspage';
-import PageLayout from '../src/Components/PageLayout';
+import Logisticspage from '../Components/Logisticspage';
+import PageLayout from '../Components/PageLayout';
 
 const Logistics = () => (
   <PageLayout>

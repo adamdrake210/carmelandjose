@@ -1,6 +1,6 @@
 import React from 'react';
-import Weddingpage from '../src/Components/Weddingpage';
-import PageLayout from '../src/Components/PageLayout';
+import Weddingpage from '../Components/Weddingpage';
+import PageLayout from '../Components/PageLayout';
 
 const Wedding = () => (
   <PageLayout>

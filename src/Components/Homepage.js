@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import { withNamespaces } from '../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
+import { withTranslation } from '../../i18n';
 import Photos from './Photos';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
@@ -61,10 +60,10 @@ const styles = theme => ({
     margin: '10px',
     border: 'solid 2px #fff',
   },
-});
+}));
 
-function Homepage(props) {
-  const { classes, t, lng } = props;
+function Homepage({ t, lng }) {
+  const classes = useStyles();
   return (
     <div className={classes.content}>
       <Typography variant="h1" className={classes.title}>
@@ -101,8 +100,4 @@ function Homepage(props) {
   );
 }
 
-Homepage.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(withNamespaces('homepage')(Homepage));
+export default withTranslation('homepage')(Homepage);

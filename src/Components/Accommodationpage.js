@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import { withNamespaces } from '../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
+import { withTranslation } from '../../i18n';
 import MetroMap from './GoogleMaps/MetroMap';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
@@ -45,10 +44,10 @@ const styles = theme => ({
       color: 'rgba(0,0,0, 0.5)',
     },
   },
-});
+}));
 
-function Accommodationpage(props) {
-  const { classes, t } = props;
+function Accommodationpage({ t }) {
+  const classes = useStyles();
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
@@ -161,10 +160,4 @@ function Accommodationpage(props) {
   );
 }
 
-Accommodationpage.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(
-  withNamespaces('accommodationpage')(Accommodationpage)
-);
+export default withTranslation('accommodationpage')(Accommodationpage);

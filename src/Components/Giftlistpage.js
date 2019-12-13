@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import { withNamespaces } from '../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
+import { withTranslation } from '../../i18n';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   content: {
     alignItems: 'flex-start',
     display: 'flex',
@@ -34,10 +33,10 @@ const styles = theme => ({
     padding: '15px 0px 5px',
     color: '#fff',
   },
-});
+}));
 
-function Giftlistpage(props) {
-  const { classes, t } = props;
+function Giftlistpage({ t }) {
+  const classes = useStyles();
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
@@ -53,8 +52,4 @@ function Giftlistpage(props) {
   );
 }
 
-Giftlistpage.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(withNamespaces('giftlistpage')(Giftlistpage));
+export default withTranslation('giftlistpage')(Giftlistpage);

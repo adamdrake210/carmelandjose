@@ -1,6 +1,6 @@
 import React from 'react';
-import Dresscodepage from '../src/Components/Dresscodepage';
-import PageLayout from '../src/Components/PageLayout';
+import Dresscodepage from '../Components/Dresscodepage';
+import PageLayout from '../Components/PageLayout';
 
 const Dresscode = () => (
   <PageLayout>

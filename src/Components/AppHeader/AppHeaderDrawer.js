@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, i18n, withNamespaces } from '../../../i18n';
+import { Link, i18n, withTranslation } from '../../../i18n';
+import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { withStyles } from '@material-ui/core/styles';
 import Home from '@material-ui/icons/Home';
 import FlightTakeoff from '@material-ui/icons/FlightTakeoff';
 import LocalHotel from '@material-ui/icons/LocalHotel';
@@ -18,7 +18,7 @@ import PregnantWoman from '@material-ui/icons/PregnantWoman';
 
 const drawerWidth = 300;
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
   },
@@ -38,10 +38,11 @@ const styles = theme => ({
   avatarContainer: {
     margin: '32px auto',
   },
-});
+}));
 
 function AppHeaderDrawer(props) {
-  const { classes, t, drawerOpen, handleDrawerToggle, lng } = props;
+  const classes = useStyles();
+  const { t, drawerOpen, handleDrawerToggle, lng } = props;
 
   const drawer = (
     <React.Fragment>
@@ -131,12 +132,9 @@ function AppHeaderDrawer(props) {
 }
 
 AppHeaderDrawer.propTypes = {
-  classes: PropTypes.object.isRequired,
   drawerOpen: PropTypes.bool.isRequired,
   handleDrawerToggle: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(
-  withNamespaces('appheaderdrawer')(AppHeaderDrawer)
-);
+export default withTranslation('appheaderdrawer')(AppHeaderDrawer);
