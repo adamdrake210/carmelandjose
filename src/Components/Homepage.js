@@ -72,9 +72,17 @@ function Homepage({ lng }) {
       </Typography>
       <div className={classes.imageRow}>
         {lng === 'en' ? (
-          <img src="./static/IMG_4086.JPG" className={classes.image} alt="Carmel & Jose" />
+          <img
+            src="./static/IMG_4086.JPG"
+            className={classes.image}
+            alt="Carmel & Jose"
+          />
         ) : (
-          <img src="./../static/IMG_4086.JPG" className={classes.image} alt="Carmel & Jose" />
+          <img
+            src="./../static/IMG_4086.JPG"
+            className={classes.image}
+            alt="Carmel & Jose"
+          />
         )}
       </div>
 
@@ -88,8 +96,10 @@ function Homepage({ lng }) {
         {t('homepage:para3')}
         <a href="mailto:carmel.drake@gmail.com" className={classes.boldlinks}>
           carmel.drake@gmail.com
-        </a>{' '}
-        {t('or')}{' '}
+        </a>
+{' '}
+        {t('or')}
+{' '}
         <a
           href="mailto:jose.silveiro76@gmail.com"
           className={classes.boldlinks}
