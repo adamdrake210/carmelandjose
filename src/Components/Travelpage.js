@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { withTranslation } from '../../i18n';
+import { useTranslation } from '../../i18n';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   title: {
     padding: '20px 0px',
     color: '#fff',
@@ -25,42 +24,43 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Travelpage({ t }) {
+function Travelpage() {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
-    <React.Fragment>
+    <>
       <Typography variant="h4" className={classes.title}>
-        {t('traveltitle')}
+        {t('travelpage:traveltitle')}
       </Typography>
       <Typography variant="h6" className={classes.subtitle}>
-        {t('travelnotice')}
+        {t('travelpage:travelnotice')}
       </Typography>
       <Typography variant="h5" className={classes.subtitle}>
-        {t('flightstitle')}
+        {t('travelpage:flightstitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('flightsinfo1')}
+        {t('travelpage:flightsinfo1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('flightsinfo2')}
+        {t('travelpage:flightsinfo2')}
       </Typography>
       <Typography variant="h5" className={classes.subtitle}>
-        {t('gettingtitle')}
+        {t('travelpage:gettingtitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo1')}
+        {t('travelpage:gettinginfo1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo2')}
+        {t('travelpage:gettinginfo2')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('gettinginfo3')}
+        {t('travelpage:gettinginfo3')}
       </Typography>
       <Typography variant="body1" className={classes.boldtext}>
-        {t('moreinfo')}
+        {t('travelpage:moreinfo')}
       </Typography>
-    </React.Fragment>
+    </>
   );
 }
 
-export default withTranslation('travelpage')(Travelpage);
+export default Travelpage;

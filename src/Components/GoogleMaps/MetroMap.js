@@ -1,9 +1,5 @@
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from 'react-google-maps';
+import React from 'react';
+import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 const MetroMap = withGoogleMap(props => (
   <GoogleMap

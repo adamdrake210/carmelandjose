@@ -36,5 +36,7 @@ module.exports = {
     'react/no-unescaped-entities': 0,
     'react/jsx-closing-bracket-location': 0,
     'react/forbid-prop-types': 0,
+    'import/extensions': 0,
+    'jsx-a11y/anchor-is-valid': 0,
   },
 };

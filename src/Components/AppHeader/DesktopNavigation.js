@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Link, i18n, withTranslation } from '../../../i18n';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link, useTranslation } from '../../../i18n';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   nav: {
     display: 'flex',
     padding: '0',
@@ -20,55 +21,60 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function DesktopNavigation({ t, lng }) {
+function DesktopNavigation({ lng }) {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <List className={classes.nav}>
       <Link href="/">
         <ListItem className={classes.buttonNav}>
-          <ListItemText>{t('home')}</ListItemText>
+          <ListItemText>{t('appheaderdrawer:home')}</ListItemText>
         </ListItem>
       </Link>
       <Link href="/travel">
         <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('travel')}</ListItemText>
+          <ListItemText>{t('appheaderdrawer:travel')}</ListItemText>
         </ListItem>
       </Link>
       <Link href="/accommodation">
         <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('accommodation')}</ListItemText>
+          <ListItemText>{t('appheaderdrawer:accommodation')}</ListItemText>
         </ListItem>
       </Link>
       <Link href="/preboda">
         <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('preboda')}</ListItemText>
+          <ListItemText>{t('appheaderdrawer:preboda')}</ListItemText>
         </ListItem>
       </Link>
       <Link href="/wedding">
         <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('wedding')}</ListItemText>
+          <ListItemText>{t('appheaderdrawer:wedding')}</ListItemText>
         </ListItem>
       </Link>
       <Link href="/logistics">
         <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('logistics')}</ListItemText>
+          <ListItemText>{t('appheaderdrawer:logistics')}</ListItemText>
         </ListItem>
       </Link>
       {lng === 'en' && (
         <Link href="/dresscode">
           <ListItem button className={classes.buttonNav}>
-            <ListItemText>{t('dresscode')}</ListItemText>
+            <ListItemText>{t('appheaderdrawer:dresscode')}</ListItemText>
           </ListItem>
         </Link>
       )}
       <Link href="/giftlist">
         <ListItem button className={classes.buttonNav}>
-          <ListItemText>{t('giftlist')}</ListItemText>
+          <ListItemText>{t('appheaderdrawer:giftlist')}</ListItemText>
         </ListItem>
       </Link>
     </List>
   );
 }
 
-export default withTranslation('appheaderdrawer')(DesktopNavigation);
+DesktopNavigation.propTypes = {
+  lng: PropTypes.string.isRequired,
+};
+
+export default DesktopNavigation;

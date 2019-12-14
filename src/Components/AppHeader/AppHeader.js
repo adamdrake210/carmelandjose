@@ -10,8 +10,8 @@ import Hidden from '@material-ui/core/Hidden';
 
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import { i18n, withTranslation } from '../../../i18n';
 import { Typography } from '@material-ui/core';
+import { i18n } from '../../../i18n';
 import AppHeaderDrawer from './AppHeaderDrawer';
 import DesktopNavigation from './DesktopNavigation';
 
@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function AppHeader({ t }) {
+function AppHeader() {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [lang, setLang] = useState(true);
@@ -76,12 +76,19 @@ function AppHeader({ t }) {
                 changeFlag();
               }}
             >
-              {/* {t('change-locale')} */}
               {lang === true && (
-                <img className={classes.flag} src="./static/spain.png" />
+                <img
+                  className={classes.flag}
+                  src="./static/spain.png"
+                  alt="Spanish Flag"
+                />
               )}
               {lang === false && (
-                <img className={classes.flag} src="./../static/uk.png" />
+                <img
+                  className={classes.flag}
+                  src="./../static/uk.png"
+                  alt="UK Flag"
+                />
               )}
             </Button>
           </div>
@@ -117,4 +124,4 @@ function AppHeader({ t }) {
   );
 }
 
-export default withTranslation('appheader')(AppHeader);
+export default AppHeader;

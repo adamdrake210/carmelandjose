@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { withTranslation } from '../../i18n';
-import Photos from './Photos';
+import { useTranslation } from '../../i18n';
 
 const useStyles = makeStyles(theme => ({
   content: {
@@ -62,29 +62,30 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Homepage({ t, lng }) {
+function Homepage({ lng }) {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <div className={classes.content}>
       <Typography variant="h1" className={classes.title}>
-        {t('h1')}
+        {t('homepage:h1')}
       </Typography>
       <div className={classes.imageRow}>
         {lng === 'en' ? (
-          <img src="./static/IMG_4086.JPG" className={classes.image} />
+          <img src="./static/IMG_4086.JPG" className={classes.image} alt="Carmel & Jose" />
         ) : (
-          <img src="./../static/IMG_4086.JPG" className={classes.image} />
+          <img src="./../static/IMG_4086.JPG" className={classes.image} alt="Carmel & Jose" />
         )}
       </div>
 
       <Typography variant="body1" className={classes.info}>
-        {t('para1')}
+        {t('homepage:para1')}
       </Typography>
       <Typography variant="body1" className={classes.info}>
-        {t('para2')}
+        {t('homepage:para2')}
       </Typography>
       <Typography variant="body1" className={classes.info}>
-        {t('para3')}
+        {t('homepage:para3')}
         <a href="mailto:carmel.drake@gmail.com" className={classes.boldlinks}>
           carmel.drake@gmail.com
         </a>{' '}
@@ -100,4 +101,12 @@ function Homepage({ t, lng }) {
   );
 }
 
-export default withTranslation('homepage')(Homepage);
+Homepage.defaultProps = {
+  lng: 'en',
+};
+
+Homepage.propTypes = {
+  lng: PropTypes.string,
+};
+
+export default Homepage;

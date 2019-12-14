@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
 import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -20,8 +19,10 @@ function Footer() {
     <footer className={classes.root}>
       <Typography variant="body1">
         {'\u00A9'}
-        {` ${new Date().getFullYear()}`} Carmel & Jose
-      </Typography>
+        {` ${new Date().getFullYear()}`}
+{' '}
+Carmel & Jose
+</Typography>
     </footer>
   );
 }

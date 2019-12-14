@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { withTranslation } from '../../i18n';
+import { useTranslation } from '../../i18n';
 
 const useStyles = makeStyles(theme => ({
   content: {
@@ -40,24 +39,25 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Prebodapage({ t }) {
+function Prebodapage() {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
-        {t('prebodatitle')}
+        {t('prebodapage:prebodatitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para1')}
+        {t('prebodapage:para1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para2')}
+        {t('prebodapage:para2')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('venue')}
+        {t('prebodapage:venue')}
       </Typography>
     </div>
   );
 }
 
-export default withTranslation('prebodapage')(Prebodapage);
+export default Prebodapage;

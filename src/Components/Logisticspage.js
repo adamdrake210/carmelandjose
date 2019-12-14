@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { withTranslation } from '../../i18n';
+import { useTranslation } from '../../i18n';
 import MetroMap from './GoogleMaps/MetroMap';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   title: {
     padding: '20px 0px',
     color: '#fff',
@@ -28,16 +27,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Logisticspage({ t }) {
+function Logisticspage() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
-    <React.Fragment>
+    <>
       <Typography variant="h4" className={classes.title}>
-        {t('logisticsstitle')}
+        {t('logisticspage:logisticsstitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para1')}
+        {t('logisticspage:para1')}
       </Typography>
       <MetroMap
         isMarkerShown
@@ -49,34 +49,34 @@ function Logisticspage({ t }) {
         mapElement={<div style={{ height: `100%` }} />}
       />
       <Typography variant="body1" className={classes.text}>
-        {t('para2')}
+        {t('logisticspage:para2')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para3')}
+        {t('logisticspage:para3')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para4')}
+        {t('logisticspage:para4')}
       </Typography>
       <Typography variant="h5" className={classes.subtitle}>
-        {t('para5title')}
+        {t('logisticspage:para5title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para5')}
+        {t('logisticspage:para5')}
       </Typography>
       <a
         href="https://weatherspark.com/m/36848/6/Average-Weather-in-June-in-Madrid-Spain"
         className={classes.boldlinks}
       >
-        {t('para6link')}
+        {t('logisticspage:para6link')}
       </a>
       <Typography variant="h5" className={classes.subtitle}>
-        {t('para7title')}
+        {t('logisticspage:para7title')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para7')}
+        {t('logisticspage:para7')}
       </Typography>
-    </React.Fragment>
+    </>
   );
 }
 
-export default withTranslation('logisticspage')(Logisticspage);
+export default Logisticspage;

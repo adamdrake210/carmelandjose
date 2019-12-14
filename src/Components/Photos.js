@@ -25,12 +25,24 @@ function Photos({ lng }) {
   return (
     <div className={classes.imageRow}>
       {lng === 'en' ? (
-        <img src="./static/IMG_4086.JPG" className={classes.image} />
+        <img
+          src="./static/IMG_4086.JPG"
+          className={classes.image}
+          alt="Castle"
+        />
       ) : (
-        <img src="./../static/IMG_4086.JPG" className={classes.image} />
+        <img
+          src="./../static/IMG_4086.JPG"
+          className={classes.image}
+          alt="Castle"
+        />
       )}
     </div>
   );
 }
+
+Photos.propTypes = {
+  lng: PropTypes.string.isRequired,
+};
 
 export default Photos;

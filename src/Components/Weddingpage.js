@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import Wc from '@material-ui/icons/Wc';
-import MetroMap from './GoogleMaps/MetroMap';
 import { makeStyles } from '@material-ui/core/styles';
-import { withTranslation } from '../../i18n';
+import { useTranslation } from '../../i18n';
 
 const useStyles = makeStyles(theme => ({
   content: {
@@ -66,34 +64,44 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Weddingpage({ t, lng }) {
+function Weddingpage({ lng }) {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <div className={classes.content}>
-      {/* <div className={classes.iconContainer}>
-        <Wc className={classes.icon} />
-      </div> */}
       <Typography variant="h4" className={classes.title}>
-        {t('weddingtitle')}
+        {t('weddingpage:weddingtitle')}
       </Typography>
       <div className={classes.imageRow}>
         {lng === 'en' ? (
-          <img src="./static/weddingvenue.jpg" className={classes.image} />
+          <img
+            src="./static/weddingvenue.jpg"
+            className={classes.image}
+            alt="Wedding Venue"
+          />
         ) : (
-          <img src="./../static/weddingvenue.jpg" className={classes.image} />
+          <img
+            src="./../static/weddingvenue.jpg"
+            className={classes.image}
+            alt="Wedding Venue"
+          />
         )}
       </div>
       <Typography variant="body1" className={classes.text}>
-        {t('para1')}
+        {t('weddingpage:para1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para3')}
+        {t('weddingpage:para3')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para4')}
+        {t('weddingpage:para4')}
       </Typography>
     </div>
   );
 }
 
-export default withTranslation('weddingpage')(Weddingpage);
+Weddingpage.propTypes = {
+  lng: PropTypes.string.isRequired,
+};
+
+export default Weddingpage;

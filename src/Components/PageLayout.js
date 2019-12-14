@@ -54,7 +54,6 @@ function PageLayout({ children }) {
 
 PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  height: PropTypes.oneOf(['window', 'transitional']),
 };
 
 export default PageLayout;

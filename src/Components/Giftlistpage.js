@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { withTranslation } from '../../i18n';
+import { useTranslation } from '../../i18n';
 
 const useStyles = makeStyles(theme => ({
   content: {
@@ -35,21 +35,22 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Giftlistpage({ t }) {
+function Giftlistpage() {
   const classes = useStyles();
+  const { t } = useTranslation();
   return (
     <div className={classes.content}>
       <Typography variant="h4" className={classes.title}>
-        {t('giftlisttitle')}
+        {t('giftlistpage:giftlisttitle')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para1')}
+        {t('giftlistpage:para1')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
-        {t('para2')}
+        {t('giftlistpage:para2')}
       </Typography>
     </div>
   );
 }
 
-export default withTranslation('giftlistpage')(Giftlistpage);
+export default Giftlistpage;

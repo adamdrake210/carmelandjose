@@ -62,9 +62,10 @@ function Accommodationpage({ t }) {
           href="http://antiguafabricadeharinas.com"
           className={classes.links}
           target="_blank"
+          rel="noopener noreferrer"
         >
           La Antigua Fábrica de Harinas.
-        </a>{' '}
+        </a>
         {t('weddingplace2')}
       </Typography>
       <Typography variant="body1" className={classes.text}>
@@ -97,61 +98,53 @@ function Accommodationpage({ t }) {
           href="https://www.booking.com/hotel/es/petit-palace-santa-barbara.es.html"
           className={classes.links}
           target="_blank"
+          rel="noopener noreferrer"
         >
           Booking.com
         </a>
       </Typography>
       <Typography variant="body1" className={classes.hoteltext}>
-        {t('hotelinfo1-2')}{' '}
+        {t('hotelinfo1-2')}
         <a
           href="https://www.petitpalacesantabarbara.com/"
           className={classes.links}
           target="_blank"
+          rel="noopener noreferrer"
         >
           Get Your Discount!
         </a>
       </Typography>
-      {/* <Typography variant="body1" className={classes.title}>
-        {t('hotel2')}
-      </Typography>
-      <Typography variant="body1" className={classes.hoteltext}>
-        {t('hotelinfo2')}{' '}
-        <a
-          href="https://www.nh-hoteles.es/hotel/nh-madrid-alonso-martinez"
-          className={classes.links}
-          target="_blank"
-        >
-          More Info Here
-        </a>
-      </Typography> */}
 
       <Typography variant="body1" className={classes.title}>
         {t('hotel3')}
       </Typography>
       <Typography variant="body1" className={classes.hoteltext}>
-        {t('hotelinfo3')}{' '}
+        {t('hotelinfo3')}
         <a
           href="https://hotelurso.com/"
           className={classes.links}
           target="_blank"
+          rel="noopener noreferrer"
         >
           More Info Here
         </a>
       </Typography>
       <Typography variant="body1" className={classes.hoteltext}>
-        {t('extrahotels1')}{' '}
+        {t('extrahotels1')}
         <a
           href="https://goo.gl/maps/XueywcDsuAQ4t81WA"
           className={classes.links}
           target="_blank"
+          rel="noopener noreferrer"
         >
           NH Madrid Alonso Martínez
         </a>
-        {t('extrahotels2')}{' '}
+        {t('extrahotels2')}
         <a
           href="https://goo.gl/maps/5hwNEkXgq48zdnWF7"
           className={classes.links}
           target="_blank"
+          rel="noopener noreferrer"
         >
           Hotel Sardinero Madrid
         </a>

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, i18n, withTranslation } from '../../../i18n';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
@@ -15,6 +14,7 @@ import Wc from '@material-ui/icons/Wc';
 import Pages from '@material-ui/icons/Pages';
 import SwapHoriz from '@material-ui/icons/SwapHoriz';
 import PregnantWoman from '@material-ui/icons/PregnantWoman';
+import { Link, withTranslation } from '../../../i18n';
 
 const drawerWidth = 300;
 
@@ -45,7 +45,7 @@ function AppHeaderDrawer(props) {
   const { t, drawerOpen, handleDrawerToggle, lng } = props;
 
   const drawer = (
-    <React.Fragment>
+    <>
       <List>
         <Link href="/">
           <ListItem button>
@@ -98,7 +98,7 @@ function AppHeaderDrawer(props) {
           </ListItem>
         </Link>
       </List>
-    </React.Fragment>
+    </>
   );
 
   return (
@@ -135,6 +135,7 @@ AppHeaderDrawer.propTypes = {
   drawerOpen: PropTypes.bool.isRequired,
   handleDrawerToggle: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
+  lng: PropTypes.string.isRequired,
 };
 
 export default withTranslation('appheaderdrawer')(AppHeaderDrawer);
