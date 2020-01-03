@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import { withNamespaces } from '../../i18n';
-import Photos from './Photos';
 
 const styles = theme => ({
   content: {
@@ -61,6 +61,20 @@ const styles = theme => ({
     margin: '10px',
     border: 'solid 2px #fff',
   },
+  rsvpButton: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    padding: 16,
+  },
+  buttonLink: {
+    textDecoration: 'none',
+  },
+  button: {
+    fontSize: '2em',
+    color: '#fff',
+    borderColor: '#fff',
+  },
 });
 
 function Homepage(props) {
@@ -76,6 +90,19 @@ function Homepage(props) {
         ) : (
           <img src="./../static/IMG_4086.JPG" className={classes.image} />
         )}
+      </div>
+
+      <div className={classes.rsvpButton}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://docs.google.com/forms/d/11pZcPWKo3caH2a0TCqnYfbIUmK3IFiLKQkqG4D2xNLE/edit"
+          className={classes.buttonLink}
+        >
+          <Button variant="outlined" className={classes.button}>
+            R.S.V.P.
+          </Button>
+        </a>
       </div>
 
       <Typography variant="body1" className={classes.info}>
