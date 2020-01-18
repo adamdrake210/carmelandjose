@@ -100,7 +100,7 @@ function Homepage(props) {
           className={classes.buttonLink}
         >
           <Button variant="outlined" className={classes.button}>
-            R.S.V.P.
+            {t('rsvp')}
           </Button>
         </a>
       </div>
