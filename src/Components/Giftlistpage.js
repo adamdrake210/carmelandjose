@@ -34,6 +34,13 @@ const styles = theme => ({
     padding: '15px 0px 5px',
     color: '#fff',
   },
+  links: {
+    color: '#fff',
+    fontWeight: '700',
+    '&:hover': {
+      color: 'rgba(0,0,0, 0.5)',
+    },
+  },
 });
 
 function Giftlistpage(props) {
@@ -46,6 +53,15 @@ function Giftlistpage(props) {
       <Typography variant="body1" className={classes.text}>
         {t('para1')}
       </Typography>
+      <p>
+        <a
+          href="https://www.elcorteingles.es/bodamas/"
+          className={classes.links}
+          target="_blank"
+        >
+          https://www.elcorteingles.es/bodamas/
+        </a>{' '}
+      </p>
       <Typography variant="body1" className={classes.text}>
         {t('para2')}
       </Typography>
